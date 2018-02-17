@@ -1,0 +1,149 @@
+/* ================== Global variables ================== */
+@import "mixins";
+@import "variables";
+
+/* ================== Module ==================== */ 
+ 
+h3.moduletitle {
+  color: #333;
+  padding: 0 0 20px;
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  line-height: normal;
+  margin: 0 0 20px;
+  letter-spacing: -1px;
+  &:before{
+    content: "";
+    background: #d2d2d2;
+    height: 2px;
+    width: 50px;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    .transform(translateX(-50%));
+  }
+} 
+#zo2-bottom-2-wrap{
+  h3{
+    &.moduletitle{
+      border-bottom-color: rgba(255,255,255,0.1);
+      &:after{
+        background-color: rgba(255,255,255,0.9);
+      }
+    }
+  }
+}
+#zo2-bottom-2-wrap{
+  h3{
+    &.moduletitle{
+      color: @white; 
+	  text-transform: capitalize;
+    }
+  }
+}
+.no-line h3.moduletitle{
+  background: none;
+}
+
+/* ==================== Breadcrumb ==================== */
+.breadcrumb{
+  .border-radius(0px);
+}
+
+/* ==================== Category, Archive module ====================== */
+ul.categories-module, ul.archive-module{
+  li  {
+    line-height: 57px;
+    display: inline-block;
+    width: 100%;
+    i{
+      float: left;
+      padding-right: 10px;
+    }
+    h2, h3, h4, h5, h6{
+      margin: 0;
+      text-transform: none;
+    }
+    a {
+        color: @textColor;
+        position: relative;
+        display: block;
+        border-bottom: 1px solid #eaeaea;
+        line-height: 1.7;
+        padding: 16px 0 16px 15px;
+        &:before {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: #333333;
+            content: "";
+            left: 0;
+            top: 25px;
+        }
+    }
+    &:hover,
+    &.active{
+      color: @pink;
+      > a{
+        color: @pink;
+      }
+    }
+  }
+}
+ 
+
+/* ================= Popular tags ===================== */
+.tagspopular{
+  ul{
+    li { 
+      display: inline!important;
+      padding-right: 6px;
+      margin: 3px 0;
+      a { 
+        display: inline-block;
+        font-size: 12px;
+        margin: 0 ;
+        padding: 4px 15px;
+        background-color: #f7f7f7;
+		    color: #333;
+        &:hover{
+          background-color: @pink;
+          color: @white;
+        }
+		&:before {
+                content: initial;
+				display: none;
+        }
+      }
+    }
+  }
+}
+
+/* ================= Most read ===================== */
+ul.mostread{
+  li {
+    float: left;
+    display: inline-block;
+    padding-right: 6px;
+    margin: 3px 0;
+    a {
+      display: block;
+      padding: 4px 15px;
+      border: 1px solid #e8e8e8;
+      color: #666;
+      font-size: @baseFontSize - 3;
+      &:hover {
+        background-color: #333333;
+        padding: 4px 17px 4px 15px;
+        color: @white;
+      }
+    }
+  }
+}
+
+
+
+
+

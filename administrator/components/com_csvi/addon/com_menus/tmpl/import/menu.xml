@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="jform">
+		<fieldset name="general">
+			<field name="locale"
+				   type="language"
+				   label="COM_CSVI_MENU_LOCALE_LABEL"
+				   description="COM_CSVI_MENU_LOCALE_DESC"
+				   client="site"
+				   default="en-GB"
+				   class="advancedSelect"/>
+		</fieldset>
+	</fields>
+</form>

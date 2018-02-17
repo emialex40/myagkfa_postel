@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<install version="1.7" type="plugin" group="vmpayment">
+    <name>Netpay Payment</name>
+    <creationDate>August 2017</creationDate>
+    <author>Netpay</author>
+    <authorUrl>http://net2pay.ru</authorUrl>
+    <copyright>NetPay</copyright>
+    <license></license>
+    <version>4.2.2</version>
+    <description><![CDATA[Плагин платёжной системы NetPay v4.1 <a href="http://net2pay.ru/" target="_blank">net2pay.ru</a>]]></description>
+    <languages>	
+	<language tag="en-GB">en-GB.plg_vmpayment_netpay.ini</language>
+	<language tag="ru-RU">ru-RU.plg_vmpayment_netpay.ini</language>
+    </languages>
+    <files>
+		<filename plugin="netpay">netpay.php</filename>
+		<filename>index.html</filename>
+		<filename>netpay.png</filename>
+		<filename>netpay_class.php</filename>
+		<filename>netpay_atol.php</filename>
+		<filename>netpayhandler.php</filename>
+        <folder>language</folder>
+    </files>
+    <vmconfig>
+        <fields name="params">
+            <fieldset name="main" addfieldpath="/administrator/components/com_virtuemart/elements">
+                <field type="vmjpluginwarning" />
+                <field name="payment_logos" type="vmfiles" label="VMPAYMENT_STANDARD_LOGOS"
+                        description="VMPAYMENT_STANDARD_LOGOS_DESC"
+                        directory="/plugins/vmpayment/netpay"
+                        default="netpay.png" hide_default="1" hide_none="1"
+                        stripext="0"   exclude=".*\.(php|html|xml|wsdl)" />
+                <!--<field type="text" name="test" size="10" label="VMPAYMENT_NETPAY_TEST" default="1" description="VMPAYMENT_NETPAY_TEST_DESC" />-->
+                <field type="radio" name="test" size="10" label="VMPAYMENT_NETPAY_TEST" default="1" description="VMPAYMENT_NETPAY_TEST_DESC">
+                    <option value="0">VMPAYMENT_NETPAY_TEST_OFF</option>
+                    <option value="1">VMPAYMENT_NETPAY_TEST_ON</option>
+                </field>
+                <field type="text" name="api_key" size="50" label="VMPAYMENT_NETPAY_API_KEY" default="" description="VMPAYMENT_NETPAY_API_KEY_DESC" />
+                <field type="text" name="auth_sign" size="50" label="VMPAYMENT_NETPAY_AUTH_SIGN" default="" description="VMPAYMENT_NETPAY_AUTH_SIGN_DESC" />
+                <field type="list" name="mode" size="10" label="VMPAYMENT_NETPAY_MODE" default="online" description="VMPAYMENT_NETPAY_MODE_DESC">
+                    <option value="online">VMPAYMENT_NETPAY_MODE_ONLINE</option>
+                    <option value="email">VMPAYMENT_NETPAY_MODE_EMAIL</option>
+                </field>
+                <field type="text" name="email" size="50" label="VMPAYMENT_NETPAY_EMAIL" default="" description="VMPAYMENT_NETPAY_EMAIL_DESC" />
+                <field type="textarea" name="email_success_text" size="50" label="VMPAYMENT_NETPAY_EMAIL_SUCCESS_TEXT"
+                       default="После уточнения деталей заказа мы отправим Вам ссылку на оплату"
+                       description="VMPAYMENT_NETPAY_EMAIL_SUCCESS_TEXT_DESC" />
+                <field type="textarea" name="email_failure_text" size="50" label="VMPAYMENT_NETPAY_EMAIL_FAILURE_TEXT"
+                       default="В момент формирования ссылки на оплату призошла ошибка сервера, свяжитесь с нами для получения ссылки"
+                       description="VMPAYMENT_NETPAY_EMAIL_FAILURE_TEXT_DESC" />
+                <field name="status_paid"
+                       type="vmorderstate"
+                       scope="com_virtuemart"
+                       default="C"
+                       label="VMPAYMENT_NETPAY_STATUS_PAID"
+                       description="VMPAYMENT_NETPAY_STATUS_PAID_DESC" />
+				<field name="status_capture"
+                       type="vmorderstate"
+                       scope="com_virtuemart"
+                       default="P"
+                       label="VMPAYMENT_NETPAY_STATUS_CAPTURE"
+                       description="VMPAYMENT_NETPAY_STATUS_CAPTURE_DESC" />
+                <field type="radio" name="atol" size="10" label="VMPAYMENT_NETPAY_ATOL" default="0" description="VMPAYMENT_NETPAY_ATOL_DESC">
+                    <option value="0">VMPAYMENT_NETPAY_ATOL_OFF</option>
+                    <option value="1">VMPAYMENT_NETPAY_ATOL_ON</option>
+                </field>
+                <field type="text" name="inn" size="15" label="VMPAYMENT_NETPAY_INN" default="" description="VMPAYMENT_NETPAY_INN_DESC" />
+                <field type="list" name="tax" size="10" label="VMPAYMENT_NETPAY_TAX" default="none" description="VMPAYMENT_NETPAY_TAX_DESC">
+                    <option value="none">VMPAYMENT_NETPAY_TAX_NONE</option>
+                    <option value="vat0">VMPAYMENT_NETPAY_TAX_VAT0</option>
+                    <option value="vat10">VMPAYMENT_NETPAY_TAX_VAT10</option>
+                    <option value="vat18">VMPAYMENT_NETPAY_TAX_VAT18</option>
+                    <option value="vat110">VMPAYMENT_NETPAY_TAX_VAT110</option>
+                    <option value="vat118">VMPAYMENT_NETPAY_TAX_VAT118</option>
+                </field>
+            </fieldset>
+        </fields>
+    </vmconfig>
+</install>

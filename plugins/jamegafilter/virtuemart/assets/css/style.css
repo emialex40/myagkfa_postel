@@ -1,0 +1,148 @@
+/* Extra layout for virtuemart component */
+.layout-2 .ja-products-wrapper .product-items {
+  border: 1px solid #ddd;
+  border-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.layout-2 .ja-products-wrapper .product-item {
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.layout-2 .ja-products-wrapper .product-item .product-item-info {
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  padding-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.layout-2 .ja-products-wrapper .product-item .product-item-info:hover {
+  box-shadow: none;
+}
+
+.layout-2 .ja-products-wrapper .product-item .product-item-name {
+  min-height: 45px;
+}
+
+.layout-2 .ja-products-wrapper .product-items.cols-3 .product-item:nth-child(3n+3) .product-item-info {
+}
+
+.layout-2 .ja-products-wrapper .product-item .price-box {
+  float: right;
+}
+
+/* Add to cart bar */
+.layout-2 .ja-products-wrapper .product-item-actions {
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+  width: 100%;
+  transition: all 0.35s;
+}
+
+.layout-2 .ja-products-wrapper .product-item-info:hover .product-item-actions {
+  bottom: 0;
+}
+
+.layout-2 .ja-products-wrapper .product-item .product-item-actions .addtocart-bar {
+  background-color: #f0f0f0;
+  margin-bottom: 0;
+}
+
+.layout-2 .ja-products-wrapper .product-item .addtocart-button {
+  float: left;
+  width: 50%;
+}
+
+.layout-2 .ja-products-wrapper .product-item .addtocart-button .btn,
+.layout-2 .ja-products-wrapper .product-item .btn-default,
+.layout-2 .ja-products-wrapper .product-item .btn-detail {
+  border: 0;
+  border-top: 1px solid #dedede;
+  color: #666;
+  font-weight: 500;
+  font-size: 12px;
+  height: 40px;
+  line-height: 40px;
+  letter-spacing: 0.5px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.layout-2 .ja-products-wrapper .product-item .addtocart-button .btn:hover,
+.layout-2 .ja-products-wrapper .product-item .btn-detail:hover {
+  background-color: #096;
+  border-color: #096;
+  color: #fff;
+  text-decoration: none;
+}
+
+.layout-2 .ja-products-wrapper .product-item .btn-detail {
+  border-left: 1px solid #dedede;
+  display: inline-block;
+  text-transform: uppercase;
+  text-align: center;
+  width: 50%;
+}
+
+.layout-2 .ja-products-wrapper .product-item .addtocart-button .btn {
+  background-color: #eee;
+  color: #333;
+  border-radius: 0;
+  width: 100%;
+}
+
+.layout-2 div.toolbar-bottom {
+  border-top: 0;
+}
+
+/* Unavailable */
+.layout-2 .ja-products-wrapper .product-item-actions.unavailable .stock {
+  float: left;
+  width: 50%;
+}
+
+.layout-2 .ja-products-wrapper .product-item-actions.unavailable .btn-default {
+  float: right;
+  border-radius: 0;
+  width: 50%;
+}
+
+.layout-2 .ja-products-wrapper .product-item-actions.unavailable .stock,
+.layout-2 .ja-products-wrapper .product-item-actions.unavailable .btn-default {
+  border: 0;
+  border-top: 1px solid #dedede;
+  color: #666;
+  font-weight: 500;
+  font-size: 12px;
+  height: 40px;
+  line-height: 40px;
+  letter-spacing: 0.5px;
+  padding-top: 0;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.layout-2 .ja-products-wrapper .product-item-actions.unavailable .stock span {
+  color: #c00;
+}
+
+.layout-2 .ja-products-wrapper .product-item-actions.unavailable .btn-default:hover {
+  background-color: #096;
+  border-color: #096;
+  color: #fff;
+}
+
+
+/* Responsive style */
+@media screen and (min-width: 769px) {
+  .layout-2 .ja-products-wrapper .product-items.cols-3 .product-item:nth-child(3n+3) .product-item-info {
+    border-right: 0;
+  }
+}

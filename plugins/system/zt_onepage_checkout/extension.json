@@ -1,0 +1,11 @@
+{
+    "name": "Zt Onepage Checkout",
+    "extension": {
+        "type": "plugin",
+        "group": "system",
+        "name": "zt_onepage_checkout"
+    },
+    "namespace": "Ztonepage",
+    "admin": 0,
+    "text": "PLG_SYSTEM_ZT_ONEPAGE_CHECKOUT_"
+}

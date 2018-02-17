@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>   	     		    		          	
+<extension version="2.5" type="file" method="upgrade">
+	<name>netpay</name>
+	<author>net2pay.ru</author>
+	<creationDate>July, 2017</creationDate>
+	<copyright>Copyright © net2pay.ru. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>support@net2pay.ru</authorEmail>
+	<authorUrl>http://net2pay.ru/</authorUrl>
+    <version>4.2.2</version>
+	<description><![CDATA[Developed & Powered by <a href="http://net2pay.ru/" target="_blank">net2pay.ru</a>]]></description>
+        <scriptfile>netpay_install.php</scriptfile>
+	<fileset>
+		<files>
+			<folder>plugins</folder>
+		</files>
+	</fileset>
+</extension>

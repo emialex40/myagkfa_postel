@@ -1,0 +1,241 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+
+.zt-opc-element {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+.zt-opc-element *{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+}
+.zt-opc-element .cart-summary{
+    position: relative;
+    width: 100%;
+}
+.zt-opc-element fieldset{
+    padding: 0 0px;
+    border: none;
+}
+.cart-summary .PricesalesPrice > span{
+    color: red;
+    font-size: 15px;
+}
+.cart-summary .price-nomal .PricesalesPrice > span{
+    font-size: 14px;
+    color: inherit;
+}
+.zt-opc-element strong{
+    font-weight: bold;
+}
+.zt-opc-element .inner-wrap{
+    padding: 10px;
+}
+.zt-opc-title{
+    background-color: #e5e5e5;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 15px;
+    margin: 0;
+}
+.zt-opc-step{
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    height: 34px;
+    line-height: 34px;
+    margin-right: 10px;
+    text-align: center;
+    vertical-align: 4px;
+    width: 34px;
+}
+
+.zt-opc-element .form-group label{
+    display: block;
+}
+.zt-opc-element .form-group input[type="text"],
+.zt-opc-element .form-group input[type="tel"],
+.zt-opc-element .form-group input[type="password"],
+.zt-opc-element .form-group input[type="email"],
+.zt-opc-element .form-group select{
+    width: 100%;
+    margin: 0;
+}
+input.quantity-input{
+    background: transparent;
+    border: none;
+    height: auto !important;
+}
+table.cart-summary tr th{
+    background: transparent;
+
+}
+span.vm-price-desc{
+    margin: 0 3px 0 0;
+}
+.table > tbody > tr th:first-child,
+.table > tfoot > tr > th:first-child,
+.table > thead > tr > th:first-child,
+.table > tbody > tr td:first-child,
+.table > tfoot > tr > td:first-child,
+.table > thead > tr > td:first-child{
+    padding-left: 0;
+}
+.table > tbody > tr > th:last-child,
+.table > tfoot > tr > th:last-child,
+.table > thead > tr > th:last-child,
+.table > tbody > tr > td:last-child{
+    padding-right: 0;
+}
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"],
+.radio input[type="radio"],
+.radio-inline input[type="radio"]{
+    float: left !important;
+    margin: 0 4px 0 0 !important;
+    position: relative !important;
+}
+.zt-opc-element textarea.customer-comment{
+    width: 100%;
+}
+.zt-opc-cart-product-name{
+    margin-bottom: 10px;
+}
+.zt-opc-cart-p-info{
+    padding-bottom: 10px;
+}
+.zt-opc-cart-arrow{
+    height: 95px;
+    margin-top: -104px;
+    position: relative;
+    width: 100%;
+}
+.zt-opc-cart-arrow:hover .zt-opc-cart-arrow-box{
+    opacity: 1;
+    visibility: visible;
+}
+.quanlity-nomal{
+    margin: 10px 0;
+    display: block;
+}
+.zt-opc-cart-arrow-box{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease 0s;
+}
+.zt-opc-cart-arrow-box:before{
+    background-color: #fff;
+    border-color: #ddd;
+    border-style: solid;
+    border-width: 0 0 1px 1px;
+    content: "";
+    height: 20px;
+    position: absolute;
+    right: 50%;
+    margin-right: -14px;
+    top: -11px;
+    transform: rotate(135deg);
+    width: 20px;
+}
+.zt-opc-cart-btn{
+    margin-top: 4px;
+}
+[id*="zt-opc-shoppingcart-"]{
+    margin: 0 !important;
+}
+.dotted-line{
+    display: block;
+    height: 1px;
+    margin: 10px 0 9px;
+    width: 100%;
+
+}
+.vmCartPaymentLogo, .vmCartPaymentLogo img,
+#zt-opc-billto-form #agreed-group,
+.zt-opc-element .form-group#delimiter_billto-group{
+    display: none;
+}
+.checkbox input.terms-of-service{
+    margin-top: 4px !important;
+}
+
+.zt-opc-hidden{
+    display: none;
+}
+
+.zt-opc-ajax-overlay {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+    z-index: 2000;
+    background-image: url(../images/ajax-loading-small.gif);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.zt-opc-page-title{
+    font-size: 16pt;
+    font-weight: bold;
+    margin: 0;
+}
+.chzn-container{
+    width: 100%!important;
+}
+.inner-wrap h1{
+    margin: 0;
+}
+#zt-opc-coupon-wrap lable{
+    line-height: 32px;
+}
+.zt-opc-cart-product-image{
+    display: inline-block;width: 100px; float: left;
+}
+
+
+.add-padding input, .add-padding button{
+    margin-right: 5px!important;
+}
+#zt-opc-purchase-wrap .zt-opc-purchase-row #zt-opc-purchase-order-submit{
+    background-color: #eeeeee;
+    border-color: #eeeeee;
+    text-transform: capitalize;
+    color: #000;
+    opacity: 1;
+    padding: 10px 20px;
+}
+#zt-opc-purchase-wrap .zt-opc-purchase-row #zt-opc-purchase-order-submit:hover{background-color: #e5e5e5;transition: all 0s ease-in-out 0s;}
+
+#zt-opc-login-toggle{font-weight: 600;}
+.inner-wrap .cart-summary button{
+    height: 30px;width: 30px; margin-top: 0;
+}
+#zt-opc-cart-form .cart-summary tr td{padding-left: 5px;padding-right: 5px;border-right: 1px solid #EBEBEB; border-bottom: 1px solid #EBEBEB;text-align: right;}
+
+
+th{
+    padding-left: 5px !important;  border-right: 1px solid #EBEBEB;
+}
+#zt-opc-cart-form .cart-summary tr td.col-name{text-align: left;}
+#zt-opc-cart-form .cart-summary tr td.col-left{text-align: left;}
+#zt-opc-cart-form .cart-summary tr td.col-qty{text-align: center;}
+#zt-opc-cart-form .cart-summary tr td.col-qty .add-padding{display: inline-block;}
+.continue-shoping{
+    float: right;
+}
+
+
+
+
+
+

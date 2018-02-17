@@ -1,0 +1,98 @@
+a {
+  color: #c83548;
+}
+nav.zo2-menu .navbar-nav > .open a {
+  color: #c83548;
+}
+nav.zo2-menu .navbar-nav > .open a:hover,
+nav.zo2-menu .navbar-nav > .open a:focus {
+  color: #c83548;
+}
+nav.zo2-menu .navbar-nav > .open a:after {
+  border-bottom-color: #c83548;
+}
+nav.zo2-menu .navbar-nav > .open > .mega-dropdown-menu > .mega-dropdown-inner {
+  border-top-color: #c83548;
+}
+nav.zo2-menu .navbar-nav > li a:hover,
+nav.zo2-menu .navbar-nav > li a:focus {
+  color: #c83548;
+}
+nav.zo2-menu .navbar-nav > li a:before {
+  background-color: #c83548;
+}
+nav.zo2-menu .navbar-nav > li.active > a {
+  color: #c83548;
+}
+nav.zo2-menu .navbar-nav > li.active > a:before {
+  background-color: #c83548;
+}
+nav.zo2-menu .navbar-nav ul.mega-nav li a:hover,
+nav.zo2-menu .navbar-nav ul.mega-nav li a:active,
+nav.zo2-menu .navbar-nav ul.mega-nav li a:focus {
+  color: #c83548;
+}
+nav.zo2-menu .navbar-nav ul.mega-nav li.active > a {
+  color: #c83548;
+}
+#zo2-body-wrap .top-feature .zo2-feature .zo2-circle {
+  color: #c83548;
+}
+#zo2-body-wrap .top-feature .zo2-feature .zo2-circle:before {
+  box-shadow: 0 0 0 3px #c83548;
+}
+#zo2-body-wrap .top-feature .zo2-feature:hover .zo2-circle {
+  background-color: #c83548;
+  color: #fff;
+}
+.box-color {
+  background: #c83548;
+}
+@media (max-width: 767px) {
+  body nav.zo2-menu .navbar-toggle:hover .icon-bar {
+    background-color: #c83548;
+  }
+}
+.btn-success {
+  background-color: #c83548;
+  color: #fff !important;
+}
+.btn-success:hover {
+  background-color: #8c2532;
+}
+.zo2-pagination ul >li.active >span,
+.pagination li:hover a {
+  background: #c83548;
+}
+.item-page .article_content {
+  border-top: 3px solid #c83548;
+}
+.item-page .article_content .article_icon {
+  background: #c83548;
+}
+.dropdown-toggle:hover,
+.dropdown-toggle:active,
+.dropdown-toggle:focus {
+  color: #c83548;
+}
+.item-page .article_content h1.singleItemTitle {
+  color: #c83548;
+}
+.pager li a:hover,
+.pager li a:active,
+.pager li a:focus {
+  background: #c83548;
+}
+.wishlist .ajax-dropdown .btn-wishlist span {
+  background-color: #c83548;
+}
+#zo2-footer-wrap #zo2-footer-copyright footer a {
+  color: #c83548;
+}
+.products .product-price .PricesalesPrice,
+.product .product-price .PricesalesPrice {
+  color: #c83548;
+}
+.search-area .search-form form:before {
+  color: #c83548;
+}

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="vmpayment" method="upgrade">
+	<name>VM STT_YAKASSA</name>
+	<author>Stt</author>
+	<creationDate>Nov 2015</creationDate>
+	<copyright>(C) 2015 Stt. All rights reserved.</copyright>
+	<license>Commercial</license>
+	<authorEmail>stt_@yahoo.com</authorEmail>
+	<authorUrl>redozator.ru</authorUrl>
+	<version>3.0.0</version>
+	<description>Yandex kassa payment. Техподдержка: stt_@yahoo.com</description>
+	<files>
+		<filename plugin="sttyakassa">sttyakassa.php</filename>
+		<filename>YaMoneyCommonHttpProtocol.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_vmpayment_sttyakassa.ini</language>
+		<language tag="en-GB">en-GB.plg_vmpayment_sttyakassa.sys.ini</language>
+		<language tag="ru-RU">ru-RU.plg_vmpayment_sttyakassa.ini</language>
+		<language tag="ru-RU">ru-RU.plg_vmpayment_sttyakassa.sys.ini</language>
+	</languages>
+	<vmconfig>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_virtuemart/fields">
+				<field	name="payment_logos" type="vmfiles" label="VMPAYMENT_STT_YAKASSA_LOGOS"
+					description="VMPAYMENT_STT_YAKASSA_LOGOS_DESC"
+					directory="/images/stories/virtuemart/payment"
+					default="default" hide_default="1" hide_none="1"
+					stripext="0" exclude=".*\.(php|html|xml|wsdl)" />
+				<field name="shopId" type="text" size="20" label="VMPAYMENT_STT_YAKASSA_SHOPID" description="VMPAYMENT_STT_YAKASSA_SHOPID_DESCR" default="" />
+				<field name="scid" type="text" size="20" label="VMPAYMENT_STT_YAKASSA_SCID" description="VMPAYMENT_STT_YAKASSA_SCID_DESCR" default="" />
+				<field name="shoppassword"  type="text" size="20" label="VMPAYMENT_STT_YAKASSA_PASS2" description="VMPAYMENT_STT_YAKASSA_PASS2_DESCR" default="" />
+				<field name="server"  type="text" size="60" label="VMPAYMENT_STT_YAKASSA_SERVER" description="VMPAYMENT_STT_YAKASSA_SERVER_DESCR" default="https://demomoney.yandex.ru/eshop.xml" />
+				<field name="paymethod" type="list" default="0" label="VMPAYMENT_STT_YAKASSA_PAYMETHOD" >
+					<option value="">VMPAYMENT_STT_YAKASSA_PAYMETHOD_ALL</option>
+					<option value="PC">VMPAYMENT_STT_YAKASSA_PAYMETHOD_1</option>
+					<option value="AC">VMPAYMENT_STT_YAKASSA_PAYMETHOD_2</option>
+					<option value="MC">VMPAYMENT_STT_YAKASSA_PAYMETHOD_3</option>
+					<option value="GP">VMPAYMENT_STT_YAKASSA_PAYMETHOD_4</option>
+					<option value="WM">VMPAYMENT_STT_YAKASSA_PAYMETHOD_5</option>
+					<option value="SB">VMPAYMENT_STT_YAKASSA_PAYMETHOD_6</option>
+					<option value="MP">VMPAYMENT_STT_YAKASSA_PAYMETHOD_7</option>
+					<option value="AB">VMPAYMENT_STT_YAKASSA_PAYMETHOD_8</option>
+					<option value="MA">VMPAYMENT_STT_YAKASSA_PAYMETHOD_9</option>
+					<option value="PB">VMPAYMENT_STT_YAKASSA_PAYMETHOD_10</option>
+					<option value="QW">VMPAYMENT_STT_YAKASSA_PAYMETHOD_11</option>
+					<option value="KV">VMPAYMENT_STT_YAKASSA_PAYMETHOD_12</option>
+					<option value="QP">VMPAYMENT_STT_YAKASSA_PAYMETHOD_13</option>
+				</field>
+				<field name="security_type" type="list" default="MD5" label="VMPAYMENT_STT_YAKASSA_SECURITY_TYPE" description="VMPAYMENT_STT_YAKASSA_SECURITY_TYPE_DESCR">
+					<option value="MD5">MD5</option>
+					<option value="PKCS7">PKCS7</option>
+				</field>
+				<field name="debug" type="list" default="0" label="VMPAYMENT_STT_YAKASSA_DEBUG_LABEL" description="VMPAYMENT_STT_YAKASSA_DEBUG_DESC">
+					<option value="1">COM_VIRTUEMART_YES</option>
+					<option value="0">COM_VIRTUEMART_NO</option>
+				</field>
+				<field name="send_pending" type="list" default="0" label="VMPAYMENT_STT_YAKASSA_SENDPENDING_LABEL" description="VMPAYMENT_STT_YAKASSA_SENDPENDING_DESC">
+					<option value="1">COM_VIRTUEMART_YES</option>
+					<option value="0">COM_VIRTUEMART_NO</option>
+				</field>
+				<field name="status_pending" type="vmorderstate" scope="com_virtuemart" default="P" label="VMPAYMENT_STT_YAKASSA_STATUS_PENDING" description="VMPAYMENT_STT_YAKASSA_STATUS_PENDING_EXPLAIN" />
+				<field name="status_success" type="vmorderstate" scope="com_virtuemart" default="C" label="VMPAYMENT_STT_YAKASSA_STATUS_SUCCESS" description="VMPAYMENT_STT_YAKASSA_STATUS_SUCCESS_EXPLAIN" />
+				<field name="status_canceled" type="vmorderstate" scope="com_virtuemart" default="X" label="VMPAYMENT_STT_YAKASSA_STATUS_FAILED" description="VMPAYMENT_STT_YAKASSA_STATUS_FAILED_EXPLAIN" />
+				<field name="cost_per_transaction" type="text"  label="VMPAYMENT_STT_YAKASSA_COST_PER_TRANSACTION" description="VMPAYMENT_STT_YAKASSA_COST_PER_TRANSACTION_EXPLAIN" />
+				<field name="cost_percent_total" type="text"  label="VMPAYMENT_STT_YAKASSA_COST_PERCENT_TOTAL" description="VMPAYMENT_STT_YAKASSA_COST_PERCENT_TOTAL_EXPLAIN" />
+				<field name="tax_id" type="vmtaxes" scope="com_virtuemart"  label="VMPAYMENT_STT_YAKASSA_TAX" description="VMPAYMENT_STT_YAKASSA_TAX_DESC" />
+			</fieldset>
+		</fields>
+	</vmconfig>
+	<params addpath="/administrator/components/com_virtuemart/elements">
+		<param	name="payment_logos" type="vmfiles" label="VMPAYMENT_STT_YAKASSA_LOGOS"
+			description="VMPAYMENT_STT_YAKASSA_LOGOS_DESC"
+			directory="/images/stories/virtuemart/payment"
+			default="default" hide_default="1" hide_none="1"
+			stripext="0" exclude=".*\.(php|html|xml|wsdl)" />
+		<param name="shopId" type="text" size="20" label="VMPAYMENT_STT_YAKASSA_SHOPID" description="VMPAYMENT_STT_YAKASSA_SHOPID_DESCR" default="" />
+		<param name="scid" type="text" size="20" label="VMPAYMENT_STT_YAKASSA_SCID" description="VMPAYMENT_STT_YAKASSA_SCID_DESCR" default="" />
+		<param name="shoppassword"  type="text" size="20" label="VMPAYMENT_STT_YAKASSA_PASS2" description="VMPAYMENT_STT_YAKASSA_PASS2_DESCR" default="" />
+		<param name="server"  type="text" size="60" label="VMPAYMENT_STT_YAKASSA_SERVER" description="VMPAYMENT_STT_YAKASSA_SERVER_DESCR" default="https://demomoney.yandex.ru/eshop.xml" />
+		<param name="paymethod" type="list" default="0" label="VMPAYMENT_STT_YAKASSA_PAYMETHOD" >
+			<option value="">VMPAYMENT_STT_YAKASSA_PAYMETHOD_ALL</option>
+			<option value="PC">VMPAYMENT_STT_YAKASSA_PAYMETHOD_1</option>
+			<option value="AC">VMPAYMENT_STT_YAKASSA_PAYMETHOD_2</option>
+			<option value="MC">VMPAYMENT_STT_YAKASSA_PAYMETHOD_3</option>
+			<option value="GP">VMPAYMENT_STT_YAKASSA_PAYMETHOD_4</option>
+			<option value="WM">VMPAYMENT_STT_YAKASSA_PAYMETHOD_5</option>
+			<option value="SB">VMPAYMENT_STT_YAKASSA_PAYMETHOD_6</option>
+			<option value="MP">VMPAYMENT_STT_YAKASSA_PAYMETHOD_7</option>
+			<option value="AB">VMPAYMENT_STT_YAKASSA_PAYMETHOD_8</option>
+			<option value="MA">VMPAYMENT_STT_YAKASSA_PAYMETHOD_9</option>
+			<option value="PB">VMPAYMENT_STT_YAKASSA_PAYMETHOD_10</option>
+			<option value="QW">VMPAYMENT_STT_YAKASSA_PAYMETHOD_11</option>
+			<option value="KV">VMPAYMENT_STT_YAKASSA_PAYMETHOD_12</option>
+			<option value="QP">VMPAYMENT_STT_YAKASSA_PAYMETHOD_13</option>
+		</param>
+		<param name="security_type" type="list" default="MD5" label="VMPAYMENT_STT_YAKASSA_SECURITY_TYPE" description="VMPAYMENT_STT_YAKASSA_SECURITY_TYPE_DESCR">
+			<option value="MD5">MD5</option>
+			<option value="PKCS7">PKCS7</option>
+		</param>
+		<param name="debug" type="list" default="0" label="VMPAYMENT_STT_YAKASSA_DEBUG_LABEL" description="VMPAYMENT_STT_YAKASSA_DEBUG_DESC">
+			<option value="1">COM_VIRTUEMART_YES</option>
+			<option value="0">COM_VIRTUEMART_NO</option>
+		</param>
+		<param name="send_pending" type="list" default="0" label="VMPAYMENT_STT_YAKASSA_SENDPENDING_LABEL" description="VMPAYMENT_STT_YAKASSA_SENDPENDING_DESC">
+			<option value="1">COM_VIRTUEMART_YES</option>
+			<option value="0">COM_VIRTUEMART_NO</option>
+		</param>
+		<param name="status_pending" type="vmorderstate" scope="com_virtuemart" default="P" label="VMPAYMENT_STT_YAKASSA_STATUS_PENDING" description="VMPAYMENT_STT_YAKASSA_STATUS_PENDING_EXPLAIN" />
+		<param name="status_success" type="vmorderstate" scope="com_virtuemart" default="C" label="VMPAYMENT_STT_YAKASSA_STATUS_SUCCESS" description="VMPAYMENT_STT_YAKASSA_STATUS_SUCCESS_EXPLAIN" />
+		<param name="status_canceled" type="vmorderstate" scope="com_virtuemart" default="X" label="VMPAYMENT_STT_YAKASSA_STATUS_FAILED" description="VMPAYMENT_STT_YAKASSA_STATUS_FAILED_EXPLAIN" />
+		<param name="cost_per_transaction" type="text"  label="VMPAYMENT_STT_YAKASSA_COST_PER_TRANSACTION" description="VMPAYMENT_STT_YAKASSA_COST_PER_TRANSACTION_EXPLAIN" />
+		<param name="cost_percent_total" type="text"  label="VMPAYMENT_STT_YAKASSA_COST_PERCENT_TOTAL" description="VMPAYMENT_STT_YAKASSA_COST_PERCENT_TOTAL_EXPLAIN" />
+		<param name="tax_id" type="vmtaxes" scope="com_virtuemart"  label="VMPAYMENT_STT_YAKASSA_TAX" description="VMPAYMENT_STT_YAKASSA_TAX_DESC" />
+	</params>
+</extension>

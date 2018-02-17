@@ -1,0 +1,468 @@
+{
+    "profile": "home-handmade",
+    "site_name": "",
+    "site_slogan": "",
+    "footer_copyright": "Copyrights \u00a9 2016 by <a href=\"http:\/\/cleversoft.co\">Cleversoft<\/a>. All Rights Reserved.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ",
+    "standard_logo": "images\/white_logo.png",
+    "retina_logo": "images\/logo-retina.png",
+    "sticky_logo": "images\/logo.png",
+    "footer_gototop": "1",
+    "layout": [
+        {
+            "type": "row",
+            "name": "\n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            Header                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ",
+            "customClass": "zo2-sticky",
+            "id": "zo2-header",
+            "fluidwidth": false,
+            "visibility": {
+                "xs": true,
+                "sm": true,
+                "md": true,
+                "lg": true
+            },
+            "children": [
+                {
+                    "type": "col",
+                    "span": 1,
+                    "offset": 0,
+                    "customClass": "col-xs-1 canvas-menu-area",
+                    "new_layout": 1,
+                    "visibility": {
+                        "xs": true,
+                        "sm": true,
+                        "md": false,
+                        "lg": false
+                    },
+                    "children": [
+                        {
+                            "jdoc": "canvasmenu",
+                            "type": "col",
+                            "name": "canvas-menu",
+                            "position": "canvas-menu",
+                            "style": "",
+                            "id": "",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "col",
+                    "span": 6,
+                    "offset": 0,
+                    "customClass": "mobile-menu",
+                    "new_layout": 1,
+                    "visibility": {
+                        "xs": false,
+                        "sm": false,
+                        "md": true,
+                        "lg": true
+                    },
+                    "children": [
+                        {
+                            "jdoc": "megamenu",
+                            "type": "col",
+                            "name": "mega-menu",
+                            "position": "mega-menu",
+                            "style": "none",
+                            "id": "",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "col",
+                    "span": 2,
+                    "offset": 0,
+                    "customClass": "col-xs-8 col-sm-8 mobile-logo",
+                    "new_layout": 1,
+                    "visibility": {
+                        "xs": true,
+                        "sm": true,
+                        "md": true,
+                        "lg": true
+                    },
+                    "children": [
+                        {
+                            "jdoc": "modules",
+                            "type": "col",
+                            "name": "header-logo",
+                            "position": "header-logo",
+                            "style": "none",
+                            "id": "",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "col",
+                    "span": 4,
+                    "offset": 0,
+                    "customClass": "col-sm-3 col-xs-3 search-wishlist-area",
+                    "new_layout": 1,
+                    "visibility": {
+                        "xs": true,
+                        "sm": true,
+                        "md": true,
+                        "lg": true
+                    },
+                    "children": [
+                        {
+                            "jdoc": "modules",
+                            "type": "col",
+                            "name": "position-1",
+                            "position": "position-1",
+                            "style": "zo2_xhtml",
+                            "id": "",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "row",
+            "name": "\n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            Banner                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ",
+            "customClass": "full-width",
+            "id": "",
+            "fluidwidth": false,
+            "visibility": {
+                "xs": true,
+                "sm": true,
+                "md": true,
+                "lg": true
+            },
+            "children": [
+                {
+                    "type": "col",
+                    "span": 12,
+                    "offset": 0,
+                    "customClass": "full-width",
+                    "new_layout": 1,
+                    "visibility": {
+                        "xs": true,
+                        "sm": true,
+                        "md": true,
+                        "lg": true
+                    },
+                    "children": [
+                        {
+                            "jdoc": "modules",
+                            "type": "col",
+                            "name": "slide",
+                            "position": "slide",
+                            "style": "none",
+                            "id": "",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "row",
+            "name": "\n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            Content                                                                                                                                                                                                                                                ",
+            "customClass": "",
+            "id": "",
+            "fluidwidth": false,
+            "visibility": {
+                "xs": true,
+                "sm": true,
+                "md": true,
+                "lg": true
+            },
+            "children": [
+                {
+                    "type": "col",
+                    "span": 12,
+                    "offset": 0,
+                    "customClass": "",
+                    "new_layout": 1,
+                    "visibility": {
+                        "xs": true,
+                        "sm": true,
+                        "md": true,
+                        "lg": true
+                    },
+                    "children": [
+                        {
+                            "jdoc": "modules",
+                            "type": "col",
+                            "name": "position-2",
+                            "position": "position-2",
+                            "style": "zo2_xhtml",
+                            "id": "",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "row",
+            "name": "\n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            Popular Products                                                                                                                                                                                                                                                ",
+            "customClass": "",
+            "id": "",
+            "fluidwidth": false,
+            "visibility": {
+                "xs": true,
+                "sm": true,
+                "md": true,
+                "lg": true
+            },
+            "children": [
+                {
+                    "type": "col",
+                    "span": 12,
+                    "offset": 0,
+                    "customClass": "",
+                    "new_layout": 1,
+                    "visibility": {
+                        "xs": true,
+                        "sm": true,
+                        "md": true,
+                        "lg": true
+                    },
+                    "children": [
+                        {
+                            "jdoc": "modules",
+                            "type": "col",
+                            "name": "position-3",
+                            "position": "position-3",
+                            "style": "zo2_xhtml",
+                            "id": "",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "row",
+            "name": "\n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            Subcribe                                                                                                                                                                                                                                                ",
+            "customClass": "",
+            "id": "",
+            "fluidwidth": false,
+            "visibility": {
+                "xs": true,
+                "sm": true,
+                "md": true,
+                "lg": true
+            },
+            "children": [
+                {
+                    "type": "col",
+                    "span": 12,
+                    "offset": 0,
+                    "customClass": "",
+                    "new_layout": 1,
+                    "visibility": {
+                        "xs": true,
+                        "sm": true,
+                        "md": true,
+                        "lg": true
+                    },
+                    "children": [
+                        {
+                            "jdoc": "modules",
+                            "type": "col",
+                            "name": "position-4",
+                            "position": "position-4",
+                            "style": "zo2_xhtml",
+                            "id": "",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "row",
+            "name": "\n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            \n        \t    \n    \t    \t\n\t            Footer                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ",
+            "customClass": "",
+            "id": "zo2-footer",
+            "fluidwidth": false,
+            "visibility": {
+                "xs": true,
+                "sm": true,
+                "md": true,
+                "lg": true
+            },
+            "children": [
+                {
+                    "type": "col",
+                    "span": 9,
+                    "offset": 0,
+                    "customClass": "",
+                    "new_layout": 1,
+                    "visibility": {
+                        "xs": true,
+                        "sm": true,
+                        "md": true,
+                        "lg": true
+                    },
+                    "children": [
+                        {
+                            "jdoc": "modules",
+                            "type": "col",
+                            "name": "footer-copyright",
+                            "position": "footer-copyright",
+                            "style": "none",
+                            "id": "",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "col",
+                    "span": 3,
+                    "offset": 0,
+                    "customClass": "",
+                    "new_layout": 1,
+                    "visibility": {
+                        "xs": true,
+                        "sm": true,
+                        "md": true,
+                        "lg": true
+                    },
+                    "children": [
+                        {
+                            "jdoc": "modules",
+                            "type": "col",
+                            "name": "position-5",
+                            "position": "position-5",
+                            "style": "zo2_xhtml",
+                            "id": "",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "theme": {
+        "name": "yellow",
+        "css": "yellow",
+        "less": "yellow",
+        "boxed": "0",
+        "bg_image": ""
+    },
+    "menu_hover_type": "hover",
+    "menu_animation": "slide",
+    "menu_duration": "300",
+    "menu_type": "mainmenu",
+    "menu_config": {
+        "mainmenu": {
+            "item-135": {
+                "submenu": {
+                    "rows": [
+                        [
+                            {
+                                "item": 132,
+                                "width": 12
+                            }
+                        ]
+                    ]
+                }
+            },
+            "item-189": {
+                "submenu": {
+                    "rows": [
+                        [
+                            {
+                                "item": 195,
+                                "width": 3
+                            },
+                            {
+                                "item": 196,
+                                "width": 3
+                            },
+                            {
+                                "item": 203,
+                                "width": 3
+                            },
+                            {
+                                "item": 202,
+                                "width": 3
+                            }
+                        ]
+                    ]
+                },
+                "alignsub": "justify"
+            },
+            "item-195": {
+                "submenu": {
+                    "rows": [
+                        [
+                            {
+                                "item": 198,
+                                "width": 12
+                            }
+                        ]
+                    ]
+                },
+                "group": 1
+            },
+            "item-196": {
+                "submenu": {
+                    "rows": [
+                        [
+                            {
+                                "item": 204,
+                                "width": 12
+                            }
+                        ]
+                    ]
+                },
+                "group": 1
+            },
+            "item-203": {
+                "submenu": {
+                    "rows": [
+                        [
+                            {
+                                "item": 205,
+                                "width": 12
+                            }
+                        ]
+                    ]
+                },
+                "group": 1
+            },
+            "item-202": {
+                "submenu": {
+                    "rows": [
+                        [
+                            {
+                                "module_id": 131,
+                                "width": 12
+                            }
+                        ]
+                    ]
+                },
+                "group": 1
+            },
+            "item-125": {
+                "submenu": {
+                    "rows": [
+                        [
+                            {
+                                "item": 127,
+                                "width": 12
+                            }
+                        ]
+                    ]
+                }
+            }
+        }
+    },
+    "enable_rtl": "1",
+    "component_area": "0",
+    "non_responsive_layout": "0",
+    "enable_sticky_menu": "1",
+    "tracking_code": "                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ",
+    "combine_css": "0",
+    "combine_js": "0",
+    "development_mode": "1",
+    "template": "zo2_elise",
+    "name": "home-furniture"
+}

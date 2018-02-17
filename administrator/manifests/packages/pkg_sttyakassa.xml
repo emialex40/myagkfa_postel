@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE extension>
+<extension type="package" version="2.5" method="upgrade">
+	<name>sttyakassa</name>
+	<packagename>sttyakassa</packagename>
+	<version>3.0.0</version>
+	<creationDate>Nov 2015</creationDate>
+	<author>Stt</author>
+	<authorEmail>stt_@yahoo.com</authorEmail>
+	<authorUrl>http://redozator.ru</authorUrl>
+	<copyright>(C) 2015 Stt. All rights reserved.</copyright>
+	<license>Commercial</license>
+	<description>Yandex kassa payment. Техподдержка: stt_@yahoo.com</description>
+
+	<scriptfile>install.php</scriptfile>
+
+	<files folder="packages">
+		<filename type="plugin" group="vmpayment" id="sttyakassa" >plg_sttyakassa.zip</filename>
+		<filename type="file" id="sttlh" >sttlh.zip</filename> 
+	</files>
+	<order>ZGVtbw==</order>
+</extension>

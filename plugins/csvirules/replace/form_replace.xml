@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="pluginform">
+		<fieldset name="replace">
+			<field name="findtext"
+				type="textarea"
+				rows="5"
+				required="true"
+				class="input-xxlarge"
+				filter="raw" />
+
+			<field name="replacetext"
+				type="textarea"
+				rows="5"
+				required="false"
+				class="input-xxlarge"
+				filter="raw" />
+
+			<field name="multivalue"
+				type="list"
+				default="0"
+				class="advancedSelect">
+				<option value="0">COM_CSVI_NO</option>
+				<option value="1">COM_CSVI_YES</option>
+			</field>
+
+			<field name="separator"
+				   type="text"
+				   default="|"
+				   class="input-small">
+			</field>
+
+			 <field name="method"
+				type="list"
+				size="1"
+				required="true"
+				class="advancedSelect"
+				default="text">
+				<option value="text">COM_CSVI_PLUGINFORM_REPLACEMENT_REGULAR</option>
+				<option value="regex">COM_CSVI_PLUGINFORM_REPLACEMENT_REGEX</option>
+			</field>
+		</fieldset>
+	</fields>
+</form>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+	 <extension type="package" version="3.4" method="upgrade">
+		<name>Яндекс Карты LITE</name>
+		<author>Chupurnov Valeriy</author>
+		<creationDate>Mart 2015</creationDate>
+		<packagename>yandex_maps</packagename>
+		<version>4.0.14</version>
+		<url>http://xdan.ru/komponent-yandeks-karty-dlya-joomla.html</url>
+		<packager>Chupurnov Valeriy</packager>
+		<packagerurl>http://xdan.ru</packagerurl>
+		<description>Пакет установки компонента, модуля и плагина яндекс карты</description>
+		<scriptfile>script.php</scriptfile>
+		<files>
+			
+		<file type="plugin" id="plg_system_yandex_maps" group="system">plg_system_yandex_maps.v.1.2.1.zip</file>
+			<file type="module" id="yandex_maps" client="site">mod_yandex_maps.lite.v.2.2.5.zip</file>
+			<file type="component" id="com_yandex_maps">com_yandex_maps.lite.v.4.0.14.zip</file>
+		</files>
+		
+	 </extension>

@@ -1,0 +1,12 @@
+{
+    "name": "Hallo",
+    "assets": {
+        "css": [
+            "zo2\/css\/cloud-zoom.css"
+        ],
+        "js": [
+            "zo2\/js\/cloud-zoom.min.js",
+            "zo2\/js\/template.js"
+        ]
+    }
+}

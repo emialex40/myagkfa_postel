@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset addfieldpath="/administrator/components/com_zt_layerslider/models/fields">
+
+        <field name="id" type="text" class="readonly" label="JGLOBAL_FIELD_ID_LABEL"
+               description="JGLOBAL_FIELD_ID_DESC" size="10" default="0"
+               readonly="true"/>
+
+        <field name="slider_id" type="list" default="0"
+               />
+
+
+
+        <field name="title" type="text" label="JGLOBAL_TITLE"
+               description="JFIELD_TITLE_DESC" class="inputbox" size="30"
+               required="true"/>
+
+        <field name="state" type="list" label="JSTATUS"
+               description="JFIELD_PUBLISHED_DESC" class="inputbox"
+               filter="intval" size="1" default="1"
+                >
+            <option value="1">
+                JPUBLISHED
+            </option>
+            <option value="0">
+                JUNPUBLISHED
+            </option>
+            <option value="2">
+                JARCHIVED
+            </option>
+            <option value="-2">
+                JTRASHED
+            </option>
+        </field>
+
+        <field
+                name="buttonspacer"
+                description="JGLOBAL_ACTION_PERMISSIONS_DESCRIPTION"
+                type="spacer"/>
+
+
+        <field name="ordering" type="text" label="JFIELD_ORDERING_LABEL"
+               description="JFIELD_ORDERING_DESC" class="inputbox" size="6"
+               default="0"/>
+
+        <field name="access" type="accesslevel" label="JFIELD_ACCESS_LABEL"
+               description="JFIELD_ACCESS_DESC" class="inputbox" size="1"/>
+
+        <field name="language" type="contentlanguage" label="JFIELD_LANGUAGE_LABEL"
+               description="COM_ZT_LAYERSLIDER_FIELD_LANGUAGE_DESC" class="inputbox"
+                >
+            <option value="*">JALL</option>
+        </field>
+
+
+        <field
+                name="background_type" type="radio" label="COM_ZT_LAYERSLIDER_ATTRIBS_ENABLE_VIDEO_LABEL"
+                description="COM_ZT_LAYERSLIDER_ATTRIBS_ENABLE_VIDEO_DESC" class="inputbox btn-group"
+                size="1" default="image">
+            <option value="image">Image BG</option>
+            <option value="trans">Transparent BG</option>
+            <option value="solid">Solid BG</option>
+        </field>
+        <field name="background_type_value" type="hidden"
+               default=""/>
+
+        <field name="slide_bg_color" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_VIDEO_ID_LABEL"
+               description="COM_ZT_LAYERSLIDER_ATTRIBS_VIDEO_ID_DESC"
+               class="inputColorPicker slide_bg_color disabled inputbox" disabled="disabled" size="30"
+               default="#E7E7E7"/>
+
+        <field name="max_slider_posts" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_MAX_SLIDER_P_LABEL"
+               description="COM_ZT_LAYERSLIDER_ATTRIBS_MAX_SLIDER_P_DESC"
+               class="inputbox" size="30"
+               default="30"/>
+
+        <field name="change_image" type="changebg" label="COM_ZT_LAYERSLIDER_ATTRIBS_VIDEO_ID_LABEL"
+               description="COM_ZT_LAYERSLIDER_ATTRIBS_VIDEO_ID_DESC"
+               class="inputbox btn disabled" size="30" disabled="disabled"
+                />
+
+        <field name="image_url" type="hidden"
+               default=""/>
+
+        <field name="layers" type="hidden"
+               default=""/>
+
+
+    </fieldset>
+
+    <fieldset name="layers">
+
+        <field name="layer_caption" type="text" default="big_black" autocomplete="off"
+               label="COM_ZT_LAYERSLIDER_LAYER_CAPTION_LABEL"
+               description="COM_ZT_LAYERSLIDER_LAYER_CAPTION_DESC"
+               class="disabled inputbox"
+                />
+
+        <field name="layer_text" type="textarea" class="inputbox span7"
+               rows="3" cols="30" label="COM_ZT_LAYERSLIDER_LAYER_TEXT_LABEL" labelclass="control-label"
+               description="COM_ZT_LAYERSLIDER_LAYER_TEXT_DESC" />
+
+        <field name="layer_image_link" type="text" label="COM_ZT_LAYERSLIDER_LAYER_IMAGE_LINK_LABEL"
+               description="COM_ZT_LAYERSLIDER_LAYER_IMAGE_LINK_DESC"
+               class="inputbox" size="30"
+               default=""/>
+
+
+        <field name="layer_link_open_in" type="radio" label="COM_ZT_LAYERSLIDER_LAYER_LINK_OPEN_IN_LABEL"
+               description="COM_ZT_LAYERSLIDER_LAYER_LINK_OPEN_IN_DESC" class="inputbox btn-group"
+               size="1" default="same" disabled="disabled"
+                >
+            <option value="same">
+                Same Window
+            </option>
+            <option value="new">
+                New Window
+            </option>
+        </field>
+
+        <field name="layer_left" type="text" label="COM_ZT_LAYERSLIDER_LAYER_LEFT_LABEL"
+               labelclass="control-label"
+               description="COM_ZT_LAYERSLIDER_LAYER_LEFT_DESC"
+               class="inputbox text-sidebar" size="30"
+               default="" disabled="disabled"/>
+        <field name="layer_top" type="text" label="COM_ZT_LAYERSLIDER_LAYER_TOP_LABEL"
+               description="COM_ZT_LAYERSLIDER_LAYER_TOP_DESC"
+               class="inputbox text-sidebar" size="30"
+               default="" disabled="disabled"/>
+
+        <field name="layer_video_autoplay" type="checkbox" label="COM_ZT_LAYERSLIDER_LAYER_VIDEO_AUTOPLAY_LABEL"
+               description="COM_ZT_LAYERSLIDER_LAYER_VIDEO_AUTOPLAY_DESC"
+               labelclass="control-label"
+               class="inputbox disabled" size="30"
+               value="1" />
+
+        <field name="layer_animation" type="list" label="COM_ZT_LAYERSLIDER_LAYER_ANIMATION_LABEL"
+               labelclass="control-label"
+               description="COM_ZT_LAYERSLIDER_LAYER_ANIMATION_DESC" class="inputbox disabled"
+               size="1" default="fade"
+                >
+            <option value="fade">Fade</option>
+            <option value="sft">Short from Top</option>
+            <option value="sfb">Short from Bottom</option>
+            <option value="sfr">Short from Right</option>
+            <option value="sfl">Short from Left</option>
+            <option value="lft">Long from Top</option>
+            <option value="lfb">Long from Bottom</option>
+            <option value="lfr">Long from Right</option>
+            <option value="lfl">Long from Left</option>
+            <option value="randomrotate">Random Rotate</option>
+        </field>
+
+        <field name="layer_easing" type="list" label="COM_ZT_LAYERSLIDER_LAYER_EASING_LABEL"
+               labelclass="control-label"
+               description="COM_ZT_LAYERSLIDER_LAYER_EASING_DESC" class="inputbox disabled"
+               size="1" default="easeOutExpo"
+                >
+            <option value="easeOutBack">easeOutBack</option>
+            <option value="easeInQuad">easeInQuad</option>
+            <option value="easeOutQuad">easeOutQuad</option>
+            <option value="easeInOutQuad">easeInOutQuad</option>
+            <option value="easeInCubic">easeInCubic</option>
+            <option value="easeOutCubic">easeOutCubic</option>
+            <option value="easeInOutCubic">easeInOutCubic</option>
+            <option value="easeInQuart">easeInQuart</option>
+            <option value="easeOutQuart">easeOutQuart</option>
+            <option value="easeInOutQuart">easeInOutQuart</option>
+            <option value="easeInQuint">easeInQuint</option>
+            <option value="easeOutQuint">easeOutQuint</option>
+            <option value="easeInOutQuint">easeInOutQuint</option>
+            <option value="easeInSine">easeInSine</option>
+            <option value="easeOutSine">easeOutSine</option>
+            <option value="easeInOutSine">easeInOutSine</option>
+            <option value="easeInExpo">easeInExpo</option>
+            <option value="easeOutExpo">easeOutExpo</option>
+            <option value="easeInOutExpo">easeInOutExpo</option>
+            <option value="easeInCirc">easeInCirc</option>
+            <option value="easeOutCirc">easeOutCirc</option>
+            <option value="easeInOutCirc">easeInOutCirc</option>
+            <option value="easeInElastic">easeInElastic</option>
+            <option value="easeOutElastic">easeOutElastic</option>
+            <option value="easeInOutElastic">easeInOutElastic</option>
+            <option value="easeInBack">easeInBack</option>
+            <option value="easeInOutBack">easeInOutBack</option>
+            <option value="easeInBounce">easeInBounce</option>
+            <option value="easeOutBounce">easeOutBounce</option>
+            <option value="easeInOutBounce">easeInOutBounce</option>
+        </field>
+
+        <field name="layer_speed" type="text" label="COM_ZT_LAYERSLIDER_LAYER_SPEED_LABEL"
+               DESCRIPTION="COM_ZT_LAYERSLIDER_LAYER_SPEED_DESC"
+               class="inputbox disabled" size="30"
+               default=""/>
+        <field name="layer_hidden" type="checkbox" label="COM_ZT_LAYERSLIDER_LAYER_HIDDEN_LABEL"
+               DESCRIPTION="COM_ZT_LAYERSLIDER_LAYER_HIDDEN_DESC"
+               class="inputbox disabled" size="30"
+               value="1"/>
+
+        <field name="layer_slide_link" type="list" label="COM_ZT_LAYERSLIDER_LAYER_SLIDE_LINK_LABEL"
+               description="COM_ZT_LAYERSLIDER_LAYER_SLIDE_LINK_DESC" class="inputbox disabled"
+               size="1" default="nothing"
+                >
+            <option value="nothing">-- Not Chosen --</option>
+            <option value="next">-- Next Slide --</option>
+            <option value="prev">-- Previous Slide --</option>
+        </field>
+
+        <field name="layer_endtime" type="text" label="COM_ZT_LAYERSLIDER_LAYER_ENDTIME_LABEL"
+               DESCRIPTION="COM_ZT_LAYERSLIDER_LAYER_ENDTIME_DESC"
+               labelclass="control-label"
+               class="inputbox disabled" size="30"
+               default=""/>
+        <field name="layer_endspeed" type="text" label="COM_ZT_LAYERSLIDER_LAYER_ENDSPEED_LABEL"
+               DESCRIPTION="COM_ZT_LAYERSLIDER_LAYER_ENDSPEED_DESC"
+               labelclass="control-label"
+               class="inputbox disabled" size="30"
+               default=""/>
+
+
+        <field name="layer_endanimation" type="list" label="COM_ZT_LAYERSLIDER_LAYER_ENDANIMATION_LABEL"
+               description="COM_ZT_LAYERSLIDER_LAYER_ENDANIMATION_DESC" class="inputbox disabled"
+               labelclass="control-label"
+               size="1" default="auto"
+                >
+            <option value="auto">Choose Automatic</option>
+            <option value="fadeout">Fade Out</option>
+            <option value="stt">Short to Top</option>
+            <option value="stb">Short to Bottom</option>
+            <option value="stl">Short to Left</option>
+            <option value="str">Short to Right</option>
+            <option value="ltt">Long to Top</option>
+            <option value="ltb">Long to Bottom</option>
+            <option value="ltl">Long to Left</option>
+            <option value="ltr">Long to Right</option>
+            <option value="randomrotateout">Random Rotate Out</option>
+        </field>
+        <field name="layer_endeasing" type="list" label="COM_ZT_LAYERSLIDER_LAYER_ENDEASING_LABEL"
+               description="COM_ZT_LAYERSLIDER_LAYER_ENDEASING_DESC" class="inputbox disabled"
+               labelclass="control-label"
+               size="1" default="nothing"
+                >
+            <option value="nothing">No Change</option>
+            <option value="easeOutBack">easeOutBack</option>
+            <option value="easeInQuad">easeInQuad</option>
+            <option value="easeOutQuad">easeOutQuad</option>
+            <option value="easeInOutQuad">easeInOutQuad</option>
+            <option value="easeInCubic">easeInCubic</option>
+            <option value="easeOutCubic">easeOutCubic</option>
+            <option value="easeInOutCubic">easeInOutCubic</option>
+            <option value="easeInQuart">easeInQuart</option>
+            <option value="easeOutQuart">easeOutQuart</option>
+            <option value="easeInOutQuart">easeInOutQuart</option>
+            <option value="easeInQuint">easeInQuint</option>
+            <option value="easeOutQuint">easeOutQuint</option>
+            <option value="easeInOutQuint">easeInOutQuint</option>
+            <option value="easeInSine">easeInSine</option>
+            <option value="easeOutSine">easeOutSine</option>
+            <option value="easeInOutSine">easeInOutSine</option>
+            <option value="easeInExpo">easeInExpo</option>
+            <option value="easeOutExpo">easeOutExpo</option>
+            <option value="easeInOutExpo">easeInOutExpo</option>
+            <option value="easeInCirc">easeInCirc</option>
+            <option value="easeOutCirc">easeOutCirc</option>
+            <option value="easeInOutCirc">easeInOutCirc</option>
+            <option value="easeInElastic">easeInElastic</option>
+            <option value="easeOutElastic">easeOutElastic</option>
+            <option value="easeInOutElastic">easeInOutElastic</option>
+            <option value="easeInBack">easeInBack</option>
+            <option value="easeInOutBack">easeInOutBack</option>
+            <option value="easeInBounce">easeInBounce</option>
+            <option value="easeOutBounce">easeOutBounce</option>
+            <option value="easeInOutBounce">easeInOutBounce</option>
+        </field>
+
+    </fieldset>
+
+    <fieldset name="navigation_preset">
+
+        <field name="name" type="text"
+               label="COM_ZT_LAYERSLIDER_N_P_NAME_LABEL"
+               description="COM_ZT_LAYERSLIDER_N_P_NAME_DESC"
+               class="inputbox"
+                />
+        <field name="handle" type="text"
+               label="COM_ZT_LAYERSLIDER_N_P_HANDLE_LABEL"
+               description="COM_ZT_LAYERSLIDER_N_P_NAME_DESC"
+               class="inputbox"
+                />
+
+        <field name="type" type="text"
+               label="COM_ZT_LAYERSLIDER_N_P_TYPE_LABEL"
+               description="COM_ZT_LAYERSLIDER_N_P_TYPE_DESC"
+               class="inputbox"
+                />
+
+
+
+
+    </fieldset>
+
+    <fields name="attribs" addfieldpath="/administrator/components/com_zt_layerslider/models/fields">
+
+        <fieldset name="basic" label="COM_ZT_LAYERSLIDER_ATTRIBS_FIELDSET_LABEL">
+
+            <field
+                    name="slide_transition"
+                    type="list"
+                    label="COM_ZT_LAYERSLIDER_ATTRIBS_SLIDE_TRANSITION_LABEL"
+                    description="COM_ZT_LAYERSLIDER_ATTRIBS_SLIDE_TRANSITION_DESC"
+                    default="random">
+                <option value="random">Random</option>
+                <option value="fade">Fade</option>
+                <option value="slidehorizontal">Slide Horizontal</option>
+                <option value="slidevertical">Slide Vertical</option>
+                <option value="boxslide">Box Slide</option>
+                <option value="boxfade">Box Fade</option>
+                <option value="slotzoom-horizontal">SlotZoom Horizontal</option>
+                <option value="slotslide-horizontal">SlotSlide Horizontal</option>
+                <option value="slotfade-horizontal">SlotFade Horizontal</option>
+                <option value="slotzoom-vertical">SlotZoom Vertical</option>
+                <option value="slotslide-vertical">SlotSlide Vertical</option>
+                <option value="slotfade-vertical">SlotFade Vertical</option>
+                <option value="curtain-1">Curtain 1</option>
+                <option value="curtain-2">Curtain 2</option>
+                <option value="curtain-3">Curtain 3</option>
+                <option value="slideleft">Slide Left</option>
+                <option value="slideright">Slide Right</option>
+                <option value="slideup">Slide Up</option>
+                <option value="slidedown">Slide Down</option>
+                <option value="papercut">Premium - Paper Cut</option>
+                <option value="3dcurtain-horizontal">Premium - 3D Curtain Horizontal</option>
+                <option value="3dcurtain-vertical">Premium - 3D Curtain Vertical</option>
+                <option value="flyin">Premium - Fly In</option>
+                <option value="turnoff">Premium - Turn Off</option>
+                <option value="cubic">Premium - Cubic</option>
+
+            </field>
+
+            <field name="slot_amount" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_SLOT_AMOUNT_LABEL"
+                   description="COM_ZT_LAYERSLIDER_ATTRIBS_SLOT_AMOUNT_DESC"
+                   class="inputbox" size="30"
+                   default="7"/>
+
+            <field name="transition_rotation" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_TRANSITION_ROTATION_LABEL"
+                   description="COM_ZT_LAYERSLIDER_ATTRIBS_TRANSITION_ROTATION_DESC"
+                   class="inputbox" size="30"
+                   default="0"/>
+
+            <field name="transition_duration" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_TRANSITION_DURATION_LABEL"
+                   description="COM_ZT_LAYERSLIDER_ATTRIBS_TRANSITION_DURATION_DESC"
+                   class="inputbox" size="30"
+                   default="300"/>
+            <field name="delay" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_DELAY_LABEL"
+                   description="COM_ZT_LAYERSLIDER_ATTRIBS_DELAY_DESC"
+                   class="inputbox" size="30"
+                   default=""/>
+            <field
+                    name="spacer1"
+                    type="spacer"
+                    label="COM_ZT_LAYERSLIDER_SPACER_LINK_SETTING"
+                    class="zt_layer_spacer_text"
+                    />
+
+            <field name="enable_link" type="radio" label="COM_ZT_LAYERSLIDER_ATTRIBS_ENABLE_LINK_LABEL"
+                   description="COM_ZT_LAYERSLIDER_ATTRIBS_ENABLE_LINK_DESC" class="inputbox btn-group"
+                   size="1" default="0"
+                    >
+                <option value="0">
+                    JNO
+                </option>
+                <option value="1">
+                    JYES
+                </option>
+            </field>
+
+            <field name="link_type" type="radio" label="COM_ZT_LAYERSLIDER_ATTRIBS_LINK_TYPE_LABEL"
+                   description="COM_ZT_LAYERSLIDER_ATTRIBS_LINK_TYPE_DESC" class="inputbox btn-group"
+                   size="1" default="regular"
+                    >
+                <option value="regular">
+                    Regular
+                </option>
+                <option value="slide">
+                    Slide
+                </option>
+            </field>
+
+            <field name="link"
+                   type="url"
+                   validate="url"
+                   filter="url"
+                   label="COM_ZT_LAYERSLIDER_ATTRIBS_LINK_LABEL"
+                   description="COM_ZT_LAYERSLIDER_ATTRIBS_LINK_DESC"
+                   class="inputbox" size="30"
+                   default=""/>
+
+            <field name="link_open_in" type="list" label="COM_ZT_LAYERSLIDER_ATTRIBS_LINK_OPEN_IN_LABEL"
+                   description="COM_ZT_LAYERSLIDER_ATTRIBS_ENABLE_LINK_DESC" class="inputbox"
+                   size="1" default="same"
+                    >
+                <option value="same">
+                    Same Window
+                </option>
+                <option value="new">
+                    New Window
+                </option>
+            </field>
+
+            <field
+                    name="slide_link"
+                    type="list"
+                    label="COM_ZT_LAYERSLIDER_ATTRIBS_LINK_TO_SLIDE_LABEL"
+                    description="COM_ZT_LAYERSLIDER_ATTRIBS_LINK_TO_SLIDE_DESC"
+                    default="nothing">
+                <option value="nothing">-- Not Chosen --</option>
+                <option value="next">-- Next Slide --</option>
+                <option value="prev">-- Previous Slide --</option>
+
+            </field>
+            <field
+                    name="spacer2"
+                    type="spacer"
+                    label="COM_ZT_LAYERSLIDER_SPACER_VIDEO_SETTING"
+                    class="zt_layer_spacer_text"
+
+                    />
+            <field name="link_pos" type="radio" label="COM_ZT_LAYERSLIDER_ATTRIBS_LINK_POS_LABEL"
+                   description="COM_ZT_LAYERSLIDER_ATTRIBS_LINK_POS_DESC" class="inputbox btn-group"
+                   size="1" default="front">
+                <option value="front">Front</option>
+                <option value="back">Back</option>
+            </field>
+            <field name="enable_video" type="radio" label="COM_ZT_LAYERSLIDER_ATTRIBS_ENABLE_VIDEO_LABEL"
+                   description="COM_ZT_LAYERSLIDER_ATTRIBS_ENABLE_VIDEO_DESC" class="inputbox btn-group"
+                   size="1" default="0">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+            <field name="video_id" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_VIDEO_ID_LABEL"
+                   description="COM_ZT_LAYERSLIDER_ATTRIBS_VIDEO_ID_DESC"
+                   class="inputbox" size="30"
+                   default=""/>
+            <field name="video_autoplay" type="checkbox" label="COM_ZT_LAYERSLIDER_ATTRIBS_VIDEO_AUTOPLAY_LABEL"
+                   description="COM_ZT_LAYERSLIDER_ATTRIBS_VIDEO_AUTOPLAY_DESC"
+                   class="inputbox" size="30"
+                   value="1"/>
+
+            <field
+                    name="slide_thumb"
+                    type="media"
+                    label="COM_ZT_LAYERSLIDER_ATTRIBS_SLIDE_THUMB_LABEL"
+                    description="COM_ZT_LAYERSLIDER_ATTRIBS_SLIDE_THUMB_DESC"
+                    />
+
+            <field name="fullwidth_centering" type="checkbox"
+                   label="COM_ZT_LAYERSLIDER_ATTRIBS_FULLWIDTH_CENTERING_LABEL"
+                   description="COM_ZT_LAYERSLIDER_ATTRIBS_FULLWIDTH_CENTERING_DESC"
+                   class="inputbox" size="30"
+                   value="1"/>
+            <field
+                    name="spacer3"
+                    type="spacer"
+                    hr="true"
+                    />
+
+
+
+        </fieldset>
+
+    </fields>
+
+
+</form>

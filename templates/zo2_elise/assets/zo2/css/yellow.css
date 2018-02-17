@@ -1,0 +1,108 @@
+a {
+  color: #f4bd33;
+}
+nav.zo2-menu .navbar-nav > .open a {
+  color: #f4bd33;
+}
+nav.zo2-menu .navbar-nav > .open a:hover,
+nav.zo2-menu .navbar-nav > .open a:focus {
+  color: #f4bd33;
+}
+nav.zo2-menu .navbar-nav > .open a:after {
+  border-bottom-color: #f4bd33;
+}
+nav.zo2-menu .navbar-nav > .open > .mega-dropdown-menu > .mega-dropdown-inner {
+  border-top-color: #f4bd33;
+}
+nav.zo2-menu .navbar-nav > li a:hover,
+nav.zo2-menu .navbar-nav > li a:focus {
+  color: #f4bd33;
+}
+nav.zo2-menu .navbar-nav > li a:before {
+  background-color: #f4bd33;
+}
+nav.zo2-menu .navbar-nav > li.active a {
+  color: #f4bd33;
+}
+nav.zo2-menu .navbar-nav > li.active a:before {
+  background-color: #f4bd33;
+}
+nav.zo2-menu .navbar-nav ul.mega-nav li a:hover,
+nav.zo2-menu .navbar-nav ul.mega-nav li a:active,
+nav.zo2-menu .navbar-nav ul.mega-nav li a:focus {
+  color: #f4bd33;
+}
+nav.zo2-menu .navbar-nav ul.mega-nav li.active a {
+  color: #f4bd33;
+}
+#zo2-body-wrap .top-feature .zo2-feature .zo2-circle {
+  color: #f4bd33;
+}
+#zo2-body-wrap .top-feature .zo2-feature .zo2-circle:before {
+  box-shadow: 0 0 0 3px #f4bd33;
+}
+#zo2-body-wrap .top-feature .zo2-feature:hover .zo2-circle {
+  background-color: #f4bd33;
+  color: #fff;
+}
+.box-color {
+  background: #f4bd33;
+}
+@media (max-width: 767px) {
+  body nav.zo2-menu .navbar-toggle:hover .icon-bar {
+    background-color: #f4bd33;
+  }
+}
+.btn-success {
+  background-color: #f4bd33;
+  color: #fff !important;
+}
+.btn-success:hover {
+  background-color: #cf970b;
+}
+.zo2-pagination ul >li.active >span,
+.pagination li:hover a {
+  background: #f4bd33;
+}
+.item-page .article_content {
+  border-top: 3px solid #f4bd33;
+}
+.item-page .article_content .article_icon {
+  background: #f4bd33;
+}
+.dropdown-toggle:hover,
+.dropdown-toggle:active,
+.dropdown-toggle:focus {
+  color: #f4bd33;
+}
+.item-page .article_content h1.singleItemTitle {
+  color: #f4bd33;
+}
+.pager li a:hover,
+.pager li a:active,
+.pager li a:focus {
+  background: #f4bd33;
+}
+.wishlist .zt-cart-bar .cart-title,
+.wishlist .ajax-dropdown .btn-wishlist span {
+  background-color: #f4bd33;
+}
+#zo2-subcribe-wrap .subscribe a.btn {
+  background-color: #f4bd33;
+}
+#zo2-footer-wrap #zo2-footer-copyright footer a {
+  color: #f4bd33;
+}
+.products .product-price .PricesalesPrice,
+.product .product-price .PricesalesPrice {
+  color: #f4bd33;
+}
+.search-area .search-form form:before {
+  color: #f4bd33;
+}
+.products .product_hover > div > a:hover i,
+.products .zt-product-action > div > a:hover i,
+.product .product_hover > div > a:hover i,
+.product .zt-product-action > div > a:hover i {
+  background-color: #f4bd33;
+}

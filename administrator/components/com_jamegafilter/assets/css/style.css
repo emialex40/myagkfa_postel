@@ -1,0 +1,69 @@
+.com_jamegafilter .ui-tabs {
+  padding-left: 270px;
+  position: relative;
+}
+
+.com_jamegafilter .ui-tabs-nav {
+  background: url(../images/dot.gif) repeat-y right top #f0f0f0;
+  border: 1px solid #ddd;
+  border-right: 0;
+  border-radius: 3px;
+  display: block;
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 20px 0 20px 20px;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  min-height: 200px;
+  top: 10px;
+  width: 200px;
+}
+
+.com_jamegafilter .ui-tabs-nav li {
+  display: block;
+  width: 100%;
+}
+
+.com_jamegafilter .ui-tabs-nav li.ui-tabs-active {
+  background-color: #fff;
+  color: #069;
+}
+
+.com_jamegafilter .ui-tabs-nav li a {
+  border: 1px solid transparent;
+  border-right: 0;
+  color: #666;
+  display: block;
+  font-weight: 600;
+  padding: 12px 10px;
+}
+
+.com_jamegafilter .ui-tabs-nav li.ui-tabs-active a {
+  border-color: #ddd;
+  border-radius: 3px 0 0 3px;
+  color: #069;
+}
+
+.com_jamegafilter .ui-tabs-nav li a .ui-sortable-handle {
+  color: #999;
+  margin-right: 5px;
+}
+
+.com_jamegafilter .ui-tabs-nav li a .ui-sortable-handle:hover {
+  color: #069;
+  cursor: move;
+}
+
+.com_jamegafilter .ui-tabs-nav li a:hover,
+.com_jamegafilter .ui-tabs-nav li a:focus,
+.com_jamegafilter .ui-tabs-nav li a:active {
+  color: #069;
+  text-decoration: none;
+}
+
+.com_jamegafilter .ui-tabs-nav li.ui-tabs-active a {
+
+}
+
+.ui-sortable-helper { display: table; }

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="2.5" type="plugin" group="vmpayment" method="upgrade">
+    <name>Yandex Http Payment</name>
+    <creationDate>April 2014</creationDate>
+    <author>VampiRUS</author>
+    <authorUrl>http://vampirus.ru</authorUrl>
+    <copyright>(c) 2014 vampirus.ru</copyright>
+    <license></license>
+    <version>2.0.5</version>
+    <description>Yandex.Money Http Payment plugin</description>
+    <languages>
+	<language tag="en-GB">en-GB.plg_vmpayment_yandex_http.ini</language>
+	<language tag="ru-RU">ru-RU.plg_vmpayment_yandex_http.ini</language>
+    </languages>
+    <files>
+	<filename plugin="yandex_http">yandex_http.php</filename>
+	<filename>index.html</filename>
+	<folder>icons</folder>
+	<filename>data.vm2</filename>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic" >
+                <field type="radio" name="debug" default="0" label="Режим отладки" description="">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+             </field>
+             <field type="radio" name="clear_before" default="0" label="Очистка вывода" description="Должно быть отключено">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+             </field>
+            </fieldset>
+        </fields>
+    </config>
+    <vmconfig>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="/administrator/components/com_virtuemart/fields">
+                <field type="vmtitle" default="Основные параметры"/>
+	<field	name="payment_logos" type="vmfiles" label="VMPAYMENT_YANDEX_HTTP_LOGOS"
+		description="VMPAYMENT_YANDEX_HTTP_LOGOS_DESC"
+		directory="/plugins/vmpayment/yandex_http/icons"
+		default="" hide_default="1"
+		stripext="0"   exclude="php|html|xml|wsdl|ini|vm2" />
+
+    <field type="text" name="yandex_license"  size="50" label="VMPAYMENT_YANDEX_HTTP_LICENSE"
+             default="" description="VMPAYMENT_YANDEX_HTTP_LICENSE_DESC" />
+ 	<field type="text" name="yandex_shopid"  size="50" label="Номер магазина в ЦПП (shopId)"
+             default="" description="VMPAYMENT_YANDEX_HTTP_SHOPID_DESC" />
+    <field type="text" name="yandex_scid"  size="50" label="Номер витрины (scid)"
+             default="" description="VMPAYMENT_YANDEX_HTTP_SCID_DESC" />
+    <field type="password" name="yandex_pass"  size="50" label="Секретный Пароль (shopPassword)"
+             default="" description="VMPAYMENT_YANDEX_HTTP_PASS_DESC" />
+     <field type="list" name="demo" default="1" label="VMPAYMENT_YANDEX_HTTP_DEMO" description="">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+             </field>
+     <field type="list" name="payment_type" default="0" label="VMPAYMENT_YANDEX_HTTP_PAYMENT_TYPE" description="">
+        <option value="0">Выбор на стороне Яндекс.Кассы</option>
+		<option value="PC">Кошелек Яндекс.Деньги</option>
+		<option value="AC">Банковская карта</option>
+        <option value="MC">Счет мобильного телефона</option>
+        <option value="GP">Наличными через кассы и терминалы</option>
+        <option value="WM">Кошелек WebMoney</option>
+        <option value="SB">Сбербанк: оплата по SMS или Сбербанк Онлайн</option>
+        <option value="MP">Мобильный терминал</option>
+        <option value="AB">Альфа-Клик</option>
+        <option value="MA">MasterPass</option>
+        <option value="PB">Интернет-банк Промсвязьбанка</option>
+        <option value="QW">QIWI Wallet</option>
+        <option value="KV">Оплата через КупиВкредит (Тинькофф Банк)</option>
+        <option value="QP">Оплата через Доверительный платеж («Куппи.ру»)</option>
+
+     </field>
+     <field name="order_status" type="vmorderstate" scope="com_virtuemart" default="P" label="Статус заказа после оформления" description="VMPAYMENT_YANDEX_HTTP_STATUS_PENDING_DESC" />
+     <field name="status_success" type="vmorderstate" scope="com_virtuemart" default="U" label="VMPAYMENT_YANDEX_HTTP_STATUS_SUCCESS" description="VMPAYMENT_YANDEX_HTTP_STATUS_SUCCESS_DESC" />
+     <field name="status_for_payment" type="vmorderstate" scope="com_virtuemart" default="P" label="статус для оплаты" description="" />
+    <field name="payment_message" type="textarea" label="Сообщение после оформления заказа" description="Для отложенной оплаты, будет показано если статус для оплаты не будеи совпадать со статусом заказа после оформления"/>
+    <field type="vmtitle" default="Режим холдирования"/>
+    <field type="list" name="hold" default="0" label="Режим холдирования" description="">
+        <option value="1">JYES</option>
+        <option value="0">JNO</option>
+     </field>
+    <field  name="status_cancel_payment" type="vmorderstate" scope="com_virtuemart" default="X" label="Статус для отмены холдирования" />
+     <field name="status_confirm_payment" type="vmorderstate" scope="com_virtuemart" default="C" label="Статус для завершение оплаты"  />
+     <field name="mws_cert" type="text" default="" label="Путь до файла сертификата" description="" />
+     <field name="mws_private_key" type="text" default="" label="Путь до файла ключа" description="" />
+     <field name="mws_cert_password" type="text" default="" label="Пароль к сертификату" description="" />
+    <field type="vmtitle" default="Остальные"/>
+    <field type="list" name="qrcode" label="показывать QR-код на странице заказа" default="1">
+        <option value="1">JYES</option>
+        <option value="0">JNO</option>
+     </field>
+
+	<field name="countries" type="vmcountries"  scope="com_virtuemart" default="" label="VMPAYMENT_YANDEX_HTTP_COUNTRIES" description="VMPAYMENT_YANDEX_HTTP_COUNTRIES_DESC"/>
+    <field name="payment_currency" type="vmacceptedcurrency" default="" label="VMPAYMENT_YANDEX_HTTP_CURRENCY" description="VMPAYMENT_YANDEX_HTTP_CURRENCY_DESC" />
+    <field type="vmcategories" name="categories" label="Запрещённые категории"
+             default="" description="Для которых данный способ оплаты не доступен" multiple="true"/>
+	<field name="min_amount" type="text"  label="VMPAYMENT_YANDEX_HTTP_MIN_AMOUNT" description="VMPAYMENT_YANDEX_HTTP_MIN_AMOUNT_EXPLAIN" />
+	<field name="max_amount" type="text"  label="VMPAYMENT_YANDEX_HTTP_MAX_AMOUNT" description="VMPAYMENT_YANDEX_HTTP_MAX_AMOUNT_EXPLAIN" />
+	<field name="cost_per_transaction" type="text"  label="VMPAYMENT_YANDEX_HTTP_COST_PER_TRANSACTION" description="VMPAYMENT_YANDEX_HTTP_COST_PER_TRANSACTION_EXPLAIN" />
+	<field name="cost_percent_total" type="text"  label="VMPAYMENT_YANDEX_HTTP_COST_PERCENT_TOTAL" description="VMPAYMENT_YANDEX_HTTP_COST_PERCENT_TOTAL_EXPLAIN" />
+	<field name="tax_id" type="vmtaxes" scope="com_virtuemart"  label="VMPAYMENT_YANDEX_HTTP_TAX" description="VMPAYMENT_YANDEX_HTTP_TAX_DESC" />
+    </fieldset>
+
+    </fields>
+</vmconfig>
+<params addpath="/administrator/components/com_virtuemart/elements">
+    <param type="vmjpluginwarning" />
+    <param  name="payment_logos" type="vmfiles" label="VMPAYMENT_YANDEX_HTTP_LOGOS"
+        description="VMPAYMENT_YANDEX_HTTP_LOGOS_DESC"
+        directory="/plugins/vmpayment/yandex_http/icons"
+        default="" hide_default="1" hide_none="1"
+        stripext="0"   exclude="php|html|xml" />
+
+    <param type="text" name="yandex_license"  size="50" label="VMPAYMENT_YANDEX_HTTP_LICENSE"
+             default="" description="VMPAYMENT_YANDEX_HTTP_LICENSE_DESC" />
+    <param type="text" name="yandex_shopid"  size="50" label="Номер магазина в ЦПП (shopId)"
+             default="" description="VMPAYMENT_YANDEX_HTTP_SHOPID_DESC" />
+    <param type="text" name="yandex_scid"  size="50" label="Номер витрины (scid)"
+             default="" description="VMPAYMENT_YANDEX_HTTP_SCID_DESC" />
+    <param type="password" name="yandex_pass"  size="50" label="Секретный Пароль (shopPassword)"
+             default="" description="VMPAYMENT_YANDEX_HTTP_PASS_DESC" />
+     <param type="list" name="demo" default="1" label="VMPAYMENT_YANDEX_HTTP_DEMO" description="">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+             </param>
+     <param type="list" name="payment_type" default="0" label="VMPAYMENT_YANDEX_HTTP_PAYMENT_TYPE" description="">
+        <option value="0">Выбор на стороне Яндекс.Кассы</option>
+        <option value="PC">Кошелек Яндекс.Деньги</option>
+        <option value="AC">Банковская карта</option>
+        <option value="MC">Счет мобильного телефона</option>
+        <option value="GP">Наличными через кассы и терминалы</option>
+        <option value="WM">Кошелек WebMoney</option>
+        <option value="SB">Сбербанк: оплата по SMS или Сбербанк Онлайн</option>
+        <option value="MP">Мобильный терминал</option>
+        <option value="AB">Альфа-Клик</option>
+        <option value="MA">MasterPass</option>
+        <option value="PB">Интернет-банк Промсвязьбанка</option>
+        <option value="QW">QIWI Wallet</option>
+        <option value="KV">Оплата через КупиВкредит (Тинькофф Банк)</option>
+        <option value="QP">Оплата через Доверительный платеж («Куппи.ру»)</option>
+     </param>
+     <param name="order_status" type="vmorderstate" scope="com_virtuemart" default="P" label="Статус заказа после оформления" description="VMPAYMENT_YANDEX_HTTP_STATUS_PENDING_DESC" />
+     <param name="status_success" type="vmorderstate" scope="com_virtuemart" default="C" label="VMPAYMENT_YANDEX_HTTP_STATUS_SUCCESS" description="VMPAYMENT_YANDEX_HTTP_STATUS_SUCCESS_DESC" />
+     <param name="status_for_payment" type="vmorderstate" scope="com_virtuemart" default="P" label="статус для оплаты" description="" />
+    <param name="payment_message" type="textarea" label="Сообщение после оформления заказа" description="Для отложенной оплаты, будет показано если статус для оплаты не будеи совпадать со статусом заказа после оформления"/>
+    <param type="list" name="hold" default="0" label="Режим холдирования" description="">
+        <option value="1">JYES</option>
+        <option value="0">JNO</option>
+     </param>
+    <param name="status_cancel_payment" type="vmorderstate" scope="com_virtuemart" default="X" label="Отмена холдирования" description="Работа в режиме холдирования" />
+     <param name="status_confirm_payment" type="vmorderstate" scope="com_virtuemart" default="C" label="Завершение оплаты(режим холдирования)" description="Работа в режиме холдирования" />
+     <param name="mws_cert" type="text" default="" label="Путь до файла сертификата" description="" />
+     <param name="mws_private_key" type="text" default="" label="Путь до файла ключа" description="" />
+     <param name="mws_cert_password" type="text" default="" label="Пароль к ключу" description="" />
+    <param type="list" name="qrcode" label="показывать qrcode на странице заказа" default="1">
+        <option value="1">JYES</option>
+        <option value="0">JNO</option>
+     </param>
+
+    <param name="countries" type="vmcountries"  scope="com_virtuemart" default="" label="VMPAYMENT_YANDEX_HTTP_COUNTRIES" description="VMPAYMENT_YANDEX_HTTP_COUNTRIES_DESC"/>
+    <param name="payment_currency" type="vmacceptedcurrency" default="" label="VMPAYMENT_YANDEX_HTTP_CURRENCY" description="VMPAYMENT_YANDEX_HTTP_CURRENCY_DESC" />
+
+    <param name="min_amount" type="text"  label="VMPAYMENT_YANDEX_HTTP_MIN_AMOUNT" description="VMPAYMENT_YANDEX_HTTP_MIN_AMOUNT_EXPLAIN" />
+    <param name="max_amount" type="text"  label="VMPAYMENT_YANDEX_HTTP_MAX_AMOUNT" description="VMPAYMENT_YANDEX_HTTP_MAX_AMOUNT_EXPLAIN" />
+    <param name="cost_per_transaction" type="text"  label="VMPAYMENT_YANDEX_HTTP_COST_PER_TRANSACTION" description="VMPAYMENT_YANDEX_HTTP_COST_PER_TRANSACTION_EXPLAIN" />
+    <param name="cost_percent_total" type="text"  label="VMPAYMENT_YANDEX_HTTP_COST_PERCENT_TOTAL" description="VMPAYMENT_YANDEX_HTTP_COST_PERCENT_TOTAL_EXPLAIN" />
+    <param name="tax_id" type="vmtaxes" scope="com_virtuemart"  label="VMPAYMENT_YANDEX_HTTP_TAX" description="VMPAYMENT_YANDEX_HTTP_TAX_DESC" />
+    </params>
+
+
+
+
+</extension>

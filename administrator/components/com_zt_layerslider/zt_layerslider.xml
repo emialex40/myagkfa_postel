@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_zt_layerslider</name>
+    <author>ZooTemplate</author>
+    <creationDate>Aug 31, 2016</creationDate>
+    <authorEmail>support@ZooTemplate.com</authorEmail>
+    <authorUrl>www.ZooTemplate.com</authorUrl>
+    <version>2.0.4</version>
+    <copyright>Copyright (C) 2008 - 2016 http://www.ZooTemplate.com. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <description>COM_ZT_LAYERSLIDER_DESCRIPTION</description>
+    <scriptfile>script.php</scriptfile>
+    <install>
+        <sql>
+            <file driver="mysqli" charset="utf8">sql/install.mysql.sql</file>
+            <file driver="mysql" charset="utf8">sql/install.mysql.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysqli" charset="utf8">sql/uninstall.mysql.sql</file>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.sql</file>
+        </sql>
+    </uninstall>
+    <administration>
+        <menu>com_zt_layerslider</menu>
+        <files folder="admin">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>release_log.html</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>zt_layerslider.php</filename>
+            <folder>assets</folder>
+            <folder>controllers</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+            <folder>sql</folder>
+        </files>
+
+        <languages folder="admin">
+            <language tag="en-GB">language/en-GB.com_zt_layerslider.ini</language>
+            <language tag="en-GB">language/en-GB.com_zt_layerslider.sys.ini</language>
+        </languages>
+    </administration>
+
+</extension>
+
+

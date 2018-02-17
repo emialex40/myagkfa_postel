@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.4" client="site" method="upgrade">
+    <name>ZT News</name>
+    <author>ZooTemplate</author>
+    <creationDate>April 04, 2016</creationDate>
+    <copyright>ZooTemplate.Com</copyright>
+    <authorEmail>support@ZooTemplate.com</authorEmail>
+    <authorUrl>http://www.ZooTemplate.com</authorUrl>
+    <version>2.6.3</version>
+    <description>ZT News allows you display previews of articles on the front page</description>
+	 
+    <files>
+        <folder>admin</folder>
+        <folder>assets</folder>
+        <folder>elements</folder>
+        <folder>libraries</folder>
+        <folder>tmpl</folder>
+        <!-- Module entry point file -->
+        <filename module="mod_zt_news">mod_zt_news.php</filename>
+        <filename>bootstrap.php</filename>
+        <filename>helper.php</filename> 		
+        <filename>index.html</filename>
+    </files>
+
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.mod_zt_news.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.mod_zt_news.sys.ini</language>
+    </languages>
+
+    <config addfieldpath="/modules/mod_zt_news/elements/">
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="source" type="list" default="content" label="SOURCE_FROM" description="SOURCE_FROM_DESC">
+                    <option value="content">CATEGORY</option>
+                </field>
+                <!-- Source categories selector -->
+                <field name="content_cids" type="category" extension="com_content" multiple="true" size="10" label="CATEGORY" description="CATEGORY_DESC" />
+                <!-- Ordering -->
+                <field name="ordering" type="list" default="" label="Ordering" description="">
+                    <option value="">Default</option>
+                    <option value="date">Oldest first (by date created)</option>
+                    <option value="rdate">Most recent first (by date created)</option>
+                    <option value="publishUp">Most recent first (by date publised)</option>
+                    <option value="alpha">Title Alphabetical</option>
+                    <option value="ralpha">Title Reverse-Alphabetical</option>
+                    <option value="order">Ordering</option>
+                    <option value="rorder">Ordering reverse</option>
+                    <option value="hits">Most popular</option>
+                    <option value="modified">Latest modified</option>
+                    <option value="rand">Random ordering</option>
+                </field>
+                <field name="max_items" type="text" default="20" label="Max items" description="" />                                        
+                <field name="v_section" type="vsection" label="" description="" />
+            </fieldset>
+            <fieldset name="show">
+                <field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+                <!--field name="template_type" type="folderlist" label="Select template" description="Select template" directory="/modules/mod_zt_news/tmpl" hide_default="1" hide_none="1" /-->
+                <field name="template_type" type="layout" default="verticle" label="Select template" description="Select template" />
+                <field name="breakpoint" type="text" default="[320, 2],[480, 2],[640, 3],[768, 3],[1170, 4]" label="Breakpoint" description="Breakpoint" />
+                <field name="showtitlecat" type="radio" class="btn-group btn-group-yesno" default="1" label="Display title category" description="Display title category">
+                    <option value="0">Hide</option>
+                    <option value="1">Show</option>
+                </field>
+                <field name="is_subcat" type="radio" class="btn-group btn-group-yesno" default="1" label="Display title category sub" description="Display title category sub">
+                    <option value="0">Hide</option>
+                    <option value="1">Show</option>
+                </field>
+                <field name="is_all" type="radio" class="btn-group btn-group-yesno" default="1" label="Show item with subcategory" description="Show item with subcategory">
+                    <option value="0">Hide</option>
+                    <option value="1">Show</option>
+                </field>
+                <field name="number_intro_items" type="text" default="1" label="Number Of Main Items" description="Number Of Main Items" />
+                <field name="number_link_items" type="text" default="2" label="Number Of List Items" description="Number Of List Items" />
+                <field name="columns" type="list" default="2" label="Number Of Column" description="Number Of Column">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </field>    
+                <field name="thumb_main_width" type="text" default="330" label="Thumb Main Width" description="Thumb Main width" />
+                <field name="thumb_main_height" type="text" default="145" label="Thumb Main Height" description ="Thumb Main Height" />
+                <field name="thumb_list_width" type="text" default="49" label="Thumb List Width" description="Thumb List width" />
+                <field name="thumb_list_height" type="text" default="49" label="Thumb List Height" description ="Thumb List Height" />
+                <field name="show_title" type="radio" class="btn-group btn-group-yesno" default="1" label="Show Title Main" description="Show title main">
+                    <option value="0">Hide</option>
+                    <option value="1">Show</option>
+                </field>
+                <field name="show_title_list" type="radio" class="btn-group btn-group-yesno" default="1" label="Show Title List" description="Show title list">
+                    <option value="0">Hide</option>
+                    <option value="1">Show</option>
+                </field>
+                <field name="is_image" type="radio" class="btn-group btn-group-yesno" default="1" label="Show Image Main" description="Show image Main">
+                    <option value="0">Hide</option>
+                    <option value="1">Show</option>
+                </field>
+                <field name="is_image_list" type="radio" class="btn-group btn-group-yesno" default="1" label="Show Image List" description="Show image List">
+                    <option value="0">Hide</option>
+                    <option value="1">Show</option>
+                </field>
+                <field name="show_intro" type="radio" class="btn-group btn-group-yesno" default="1" label="Show Intro Main" description="Show Intro main">
+                    <option value="0">Hide</option>
+                    <option value="1">Show</option>
+                </field>
+                <field name="show_intro_list" type="radio" class="btn-group btn-group-yesno" default="1" label="Show Intro List" description="Show Intro list">
+                    <option value="0">Hide</option>
+                    <option value="1">Show</option>
+                </field>
+                <field name="intro_length" type="text" default="30" label="Intro Text Length" description="Intro text length" /> 
+					 
+                <field name="show_date" type="radio" class="btn-group btn-group-yesno" default="1" label="Show Date Main" description="Show Date Main">
+                    <option value="0">Hide</option>
+                    <option value="1">Show</option>
+                </field>
+                <field name="show_date_list" type="radio" class="btn-group btn-group-yesno" default="1" label="Show Date list" description="Show Date List">
+                    <option value="0">Hide</option>
+                    <option value="1">Show</option>
+                </field>
+                <field name="show_readmore" type="radio" class="btn-group btn-group-yesno" default="0" label="Show Readmore" description="Show Readmore">
+                    <option value="0">Hide</option>
+                    <option value="1">Show</option>
+                </field> 
+            </fieldset>
+            <fieldset name="advanced">
+                <field name="cache" type="list" default="0" label="Caching" description="Select whether to cache the content of this module">
+                    <option value="1">Use global</option>
+                    <option value="0">No caching</option>
+                </field>
+                <field name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+                <field name="clear_cache" type="radio" class="btn-group btn-group-yesno" default="0" label="Clear Cache" description="Clear Cache">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+            <!-- Thumbnail configuration -->
+            <fieldset name="thumbnail">
+                <field name="thumbnail_method" type="list" default="" label="Resize method" description="">
+                    <option value="resize">Resize</option>
+                    <option value="ratio">Ratio</option>
+                    <option value="thumbnail">Thumbnail</option>
+                    <option value="crop">Crop</option>
+                </field>
+                <field name="thumbnail_crop_position" type="list" default="center" label="Crop position" description="">
+                    <option value="center">center</option>                    
+                    <option value="top-left">top-left</option>
+                    <option value="top-middle">top-middle</option>
+                    <option value="top-right">top-right</option>
+                    <option value="left-middle">left-middle</option>
+                    <option value="right-middle">right-middle</option>
+                    <option value="bottom-left">right-middle</option>
+                    <option value="bottom-middle">right-middle</option>
+                    <option value="bottom-right">right-middle</option>                   
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

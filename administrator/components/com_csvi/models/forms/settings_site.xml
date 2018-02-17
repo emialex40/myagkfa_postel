@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form cron="false">
+	<fields name="jform">
+		<fieldset name="site">
+			<field
+					name="hostname"
+					type="text"
+					default=""
+					required="true"
+					class="required"/>
+
+			<field
+					name="extraHelp"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+		</fieldset>
+	</fields>
+</form>

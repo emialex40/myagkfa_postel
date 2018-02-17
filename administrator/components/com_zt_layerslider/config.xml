@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+
+    <fieldset
+            name="sliders"
+            label="COM_ZT_LAYERSLIDER_SLIDER_CONFIGURATION_LABEL"
+            description="COM_ZT_LAYERSLIDER_SLIDER_CONFIGURATION_DESC">
+
+        <field name="yout_api" label="COM_ZT_LAYERSLIDER_SLIDER_YOUTUBE_API_LABEL"
+               description="COM_ZT_LAYERSLIDER_SLIDER_YOUTUBE_API_DESC" />
+        <field name="spacer" type="spacer" default="" label="COM_ZT_LAYERSLIDER_SLIDER_YOUTUBE_API_HOW_TO_LABEL" />
+
+        <field
+                name="js_defer"
+                type="radio"
+                class="btn-group btn-group-yesno"
+                default="1"
+                label="COM_ZT_LAYERSLIDER_SLIDER_JS_DEFER_LABEL"
+                description="COM_ZT_LAYERSLIDER_SLIDER_JS_DEFER_DESC">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+
+        <field
+                name="show_dev_export"
+                type="radio"
+                class="btn-group btn-group-yesno"
+                default="1"
+                label="COM_ZT_LAYERSLIDER_SLIDER_EXPORT_MARKUP_LABEL"
+                description="COM_ZT_LAYERSLIDER_SLIDER_EXPORT_MARKUP_DESC">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+
+    </fieldset>
+    <fieldset
+            name="repsonsive"
+            label="COM_ZT_LAYERSLIDER_SLIDER_CONFIGURATION_RE_S_LABEL"
+            description="COM_ZT_LAYERSLIDER_SLIDER_CONFIGURATION_RE_S_DESC">
+
+        <field name="width" label="COM_ZT_LAYERSLIDER_SLIDER_DEK_WID_LABEL" type="text" default="1240"
+               description="COM_ZT_LAYERSLIDER_SLIDER_DEK_WID_DESC" />
+
+<field name="width_notebook" label="COM_ZT_LAYERSLIDER_SLIDER_NOTE_WID_LABEL" type="text" default="1024"
+               description="COM_ZT_LAYERSLIDER_SLIDER_NOTE_WID_DESC" />
+
+<field name="width_tablet" label="COM_ZT_LAYERSLIDER_SLIDER_TAB_WID_LABEL" type="text" default="778"
+               description="COM_ZT_LAYERSLIDER_SLIDER_TAB_WID_DESC" />
+
+<field name="width_mobile" label="COM_ZT_LAYERSLIDER_SLIDER_MOBILE_WID_LABEL" type="text" default="480"
+               description="COM_ZT_LAYERSLIDER_SLIDER_MOBILE_WID_DESC" />
+
+    </fieldset>
+</config>

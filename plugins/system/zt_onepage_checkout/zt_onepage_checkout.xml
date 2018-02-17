@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+    <name>PLG_SYSTEM_ZT_ONEPAGE_CHECKOUT</name>
+    <author>ZooTemplate.Com</author>
+    <creationDate>July 15, 2016</creationDate>
+    <copyright>Copyright (c) 2008 - 2015 ZooTemplate</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GPLv2 or later</license>
+    <authorEmail>joomla.cleversoft@gmail.com</authorEmail>
+    <authorUrl>http://www.zootemplate.com</authorUrl>
+    <version>2.0.3</version>
+    <description>PLG_SYSTEM_ZT_ONEPAGE_CHECKOUT_XML_DESCRIPTION</description>
+    <!-- Languages -->
+    <scriptfile>install.php</scriptfile>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_system_zt_onepage_checkout.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_system_zt_onepage_checkout.sys.ini</language>
+    </languages>
+    <!-- Files & folder -->
+    <files>         
+        <folder>assets</folder>
+        <folder>helper</folder>
+        <folder>includes</folder>
+        <folder>model</folder>
+        <folder>virtuemart</folder>
+        <filename plugin="zt_onepage_checkout">zt_onepage_checkout.php</filename>
+        <filename>extension.json</filename>
+    </files>
+    
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="assets_bs3" type="radio" default="0" label="Load BS3" description="">
+                    <option value="0">1</option>
+                    <option value="1">2</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>               
+</extension>

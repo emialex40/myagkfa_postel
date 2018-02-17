@@ -1,0 +1,1 @@
+<?php die("Access Denied"); ?>#x#a:2:{s:6:"result";a:1:{i:0;O:8:"stdClass":2:{s:7:"mf_name";s:15:"Antonio Salgado";s:26:"virtuemart_manufacturer_id";s:2:"18";}}s:6:"output";s:0:"";}

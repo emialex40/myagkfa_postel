@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset addfieldpath="/administrator/components/com_zt_layerslider/models/fields">
+
+        <field name="id" type="text" class="readonly" label="JGLOBAL_FIELD_ID_LABEL"
+               description="JGLOBAL_FIELD_ID_DESC" size="10" default="0"
+               readonly="true"/>
+        <field name="title" type="text" label="JGLOBAL_TITLE"
+               description="JFIELD_TITLE_DESC" class="input-xlarge" size="30"
+               required="true" labelclass="control-label"/>
+
+        <field name="alias" type="text" label="JFIELD_ALIAS_LABEL"
+               description="JFIELD_ALIAS_DESC" class="inputbox" size="45"/>
+
+        <field name="state" type="list" label="JSTATUS"
+               description="JFIELD_PUBLISHED_DESC" class="inputbox"
+               filter="intval" size="1" default="1"
+                >
+            <option value="1">
+                JPUBLISHED
+            </option>
+            <option value="0">
+                JUNPUBLISHED
+            </option>
+            <option value="2">
+                JARCHIVED
+            </option>
+            <option value="-2">
+                JTRASHED
+            </option>
+        </field>
+
+        <field
+                name="buttonspacer"
+                description="JGLOBAL_ACTION_PERMISSIONS_DESCRIPTION"
+                type="spacer"/>
+
+        <field name="ordering" type="text" label="JFIELD_ORDERING_LABEL"
+               description="JFIELD_ORDERING_DESC" class="inputbox" size="6"
+               default="0"/>
+
+        <field name="access" type="accesslevel" label="JFIELD_ACCESS_LABEL"
+               description="JFIELD_ACCESS_DESC" class="inputbox" size="1"/>
+
+        <field name="language" type="contentlanguage" label="JFIELD_LANGUAGE_LABEL"
+               description="COM_ZT_LAYERSLIDER_FIELD_LANGUAGE_DESC" class="inputbox"
+                >
+            <option value="*">JALL</option>
+        </field>
+        <field
+                name="favourite"
+                type="radio"
+                class="btn-group"
+                labelclass="control-label"
+                label="COM_ZT_LAYERSLIDER_SLIDER_FAVOURITE_LABEL"
+                description="COM_ZT_LAYERSLIDER_SLIDER_FAVOURITE_DESC"
+                default="fixed">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+    </fieldset>
+
+    <!--<fieldset name="sliderbasic" label="COM_ZT_LAYERSLIDER_ATTRIBS_FIELDSET_SLIDER_BASIC_LABEL">-->
+
+        <!--<field-->
+                <!--name="slider_type"-->
+                <!--type="radio"-->
+                <!--class="btn-group"-->
+                <!--labelclass="control-label"-->
+                <!--label="COM_ZT_LAYERSLIDER_SLIDER_TYPE_LABEL"-->
+                <!--description="COM_ZT_LAYERSLIDER_SLIDER_TYPE_DESC"-->
+                <!--default="fixed">-->
+            <!--<option value="fixed">COM_ZT_LAYERSLIDER_FIXED</option>-->
+            <!--<option value="responsitive">COM_ZT_LAYERSLIDER_RESPONSIVE</option>-->
+            <!--<option value="fullwidth">COM_ZT_LAYERSLIDER_FULL_WIDTH</option>-->
+        <!--</field>-->
+
+        <!--<field name="slider_width" type="text" label="COM_ZT_LAYERSLIDER_SLIDER_WIDTH_LABEL"-->
+               <!--description="COM_ZT_LAYERSLIDER_SLIDER_WIDTH_DESC" class="inputbox" size="2"-->
+               <!--default="960"/>-->
+
+        <!--<field name="slider_height" type="text" label="COM_ZT_LAYERSLIDER_SLIDER_HEIGHT_LABEL"-->
+               <!--description="COM_ZT_LAYERSLIDER_SLIDER_HEIGHT_DESC" class="inputbox" size="2"-->
+               <!--default="350"/>-->
+
+        <!--<field name="screen_width1" type="text" label="COM_ZT_LAYERSLIDER_SCREEN_WIDTH1_LABEL"-->
+               <!--description="COM_ZT_LAYERSLIDER_SCREEN_WIDTH1_DESC" class="inputbox" size="6"-->
+               <!--default="940"/>-->
+
+        <!--<field name="slider_width1" type="text" label="COM_ZT_LAYERSLIDER_SLIDER_WIDTH1_LABEL"-->
+               <!--description="COM_ZT_LAYERSLIDER_SLIDER_WIDTH1_DESC" class="inputbox" size="6"-->
+               <!--default="770"/>-->
+
+        <!--<field name="screen_width2" type="text" label="COM_ZT_LAYERSLIDER_SCREEN_WIDTH2_LABEL"-->
+               <!--description="COM_ZT_LAYERSLIDER_SCREEN_WIDTH2_DESC" class="inputbox" size="6"-->
+               <!--default="780"/>-->
+
+        <!--<field name="slider_width2" type="text" label="COM_ZT_LAYERSLIDER_SLIDER_WIDTH2_LABEL"-->
+               <!--description="COM_ZT_LAYERSLIDER_SLIDER_WIDTH2_DESC" class="inputbox" size="6"-->
+               <!--default="500"/>-->
+
+        <!--<field name="screen_width3" type="text" label="COM_ZT_LAYERSLIDER_SCREEN_WIDTH3_LABEL"-->
+               <!--description="COM_ZT_LAYERSLIDER_SCREEN_WIDTH3_DESC" class="inputbox" size="6"-->
+               <!--default="510"/>-->
+
+        <!--<field name="slider_width3" type="text" label="COM_ZT_LAYERSLIDER_SLIDER_WIDTH3_LABEL"-->
+               <!--description="COM_ZT_LAYERSLIDER_SLIDER_WIDTH3_DESC" class="inputbox" size="6"-->
+               <!--default="310"/>-->
+
+        <!--<field name="screen_width4" type="text" label="COM_ZT_LAYERSLIDER_SCREEN_WIDTH4_LABEL"-->
+               <!--description="COM_ZT_LAYERSLIDER_SCREEN_WIDTH4_DESC" class="inputbox" size="6"-->
+               <!--default=""/>-->
+
+        <!--<field name="slider_width4" type="text" label="COM_ZT_LAYERSLIDER_SLIDER_WIDTH4_LABEL"-->
+               <!--description="COM_ZT_LAYERSLIDER_SLIDER_WIDTH4_DESC" class="inputbox" size="6"-->
+               <!--default=""/>-->
+
+        <!--<field name="screen_width5" type="text" label="COM_ZT_LAYERSLIDER_SCREEN_WIDTH5_LABEL"-->
+               <!--description="COM_ZT_LAYERSLIDER_SCREEN_WIDTH5_DESC" class="inputbox" size="6"-->
+               <!--default=""/>-->
+
+        <!--<field name="slider_width5" type="text" label="COM_ZT_LAYERSLIDER_SLIDER_WIDTH5_LABEL"-->
+               <!--description="COM_ZT_LAYERSLIDER_SLIDER_WIDTH5_DESC" class="inputbox" size="6"-->
+               <!--default=""/>-->
+
+        <!--<field name="screen_width6" type="text" label="COM_ZT_LAYERSLIDER_SCREEN_WIDTH6_LABEL"-->
+               <!--description="COM_ZT_LAYERSLIDER_SCREEN_WIDTH6_DESC" class="inputbox" size="6"-->
+               <!--default=""/>-->
+
+        <!--<field name="slider_width6" type="text" label="COM_ZT_LAYERSLIDER_SLIDER_WIDTH6_LABEL"-->
+               <!--description="COM_ZT_LAYERSLIDER_SLIDER_WIDTH6_DESC" class="inputbox" size="6"-->
+               <!--default=""/>-->
+
+    <!--</fieldset>-->
+
+    <fields name="attribs">
+        <fieldset></fieldset>
+
+        <!--<fieldset name="general" label="COM_ZT_LAYERSLIDER_ATTRIBS_FIELDSET_GENERAL_LABEL">-->
+
+            <!--<field name="delay" type="text" label="COM_ZT_LAYERSLIDER_DELAY_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_DELAY_DESC" class="inputbox" size="6"-->
+                   <!--default="9000"/>-->
+            <!--<field-->
+                    <!--name="zt_fullscreen"-->
+                    <!--type="radio"-->
+                    <!--class="btn-group"-->
+                    <!--labelclass="control-label"-->
+                    <!--label="COM_ZT_LAYERSLIDER_ATTRIBS_FULL_SCREEN"-->
+                    <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_FULL_SCREEN_DESC"-->
+                    <!--default="off">-->
+                <!--<option-->
+                        <!--value="off">JOFF-->
+                <!--</option>-->
+                <!--<option-->
+                        <!--value="on">JON-->
+                <!--</option>-->
+            <!--</field>-->
+            <!--<field-->
+                    <!--name="touch_enabled"-->
+                    <!--type="radio"-->
+                    <!--class="btn-group"-->
+                    <!--labelclass="control-label"-->
+                    <!--label="COM_ZT_LAYERSLIDER_ATTRIBS_TOUCH_ENABLED_LABEL"-->
+                    <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_TOUCH_ENABLED_DESC"-->
+                    <!--default="on">-->
+                <!--<option-->
+                        <!--value="off">JOFF-->
+                <!--</option>-->
+                <!--<option-->
+                        <!--value="on">JON-->
+                <!--</option>-->
+            <!--</field>-->
+
+            <!--<field-->
+                    <!--name="stop_on_hover"-->
+                    <!--type="radio"-->
+                    <!--class="btn-group"-->
+                    <!--label="COM_ZT_LAYERSLIDER_ATTRIBS_STOP_ON_HOVER_LABEL"-->
+                    <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_STOP_ON_HOVER_DESC"-->
+                    <!--labelclass="control-label"-->
+                    <!--default="on">-->
+                <!--<option-->
+                        <!--value="off">JOFF-->
+                <!--</option>-->
+                <!--<option-->
+                        <!--value="on">JON-->
+                <!--</option>-->
+            <!--</field>-->
+            <!--<field-->
+                    <!--name="shuffle_mode"-->
+                    <!--type="radio"-->
+                    <!--class="btn-group"-->
+                    <!--label="COM_ZT_LAYERSLIDER_ATTRIBS_SHUFFLE_MODE_LABEL"-->
+                    <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_SHUFFLE_MODE_DESC"-->
+                    <!--labelclass="control-label"-->
+                    <!--default="off">-->
+                <!--<option-->
+                        <!--value="off">JOFF-->
+                <!--</option>-->
+                <!--<option-->
+                        <!--value="on">JON-->
+                <!--</option>-->
+            <!--</field>-->
+
+            <!--<field-->
+                    <!--name="load_googlefont"-->
+                    <!--type="radio"-->
+                    <!--class="btn-group"-->
+                    <!--label="COM_ZT_LAYERSLIDER_ATTRIBS_LOAD_GOOGLEFONT_LABEL"-->
+                    <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_LOAD_GOOGLEFONT_DESC"-->
+                    <!--labelclass="control-label"-->
+                    <!--default="0">-->
+                <!--<option-->
+                        <!--value="0">JNO-->
+                <!--</option>-->
+                <!--<option-->
+                        <!--value="1">JYES-->
+                <!--</option>-->
+
+            <!--</field>-->
+
+            <!--<field name="google_font" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_GOOGLE_FONT_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_GOOGLE_FONT_DESC" class="inputbox" size="30"-->
+                   <!--default="PT+Sans+Narrow:400,700"/>-->
+
+            <!--<field-->
+                    <!--name="stop_slider"-->
+                    <!--type="radio"-->
+                    <!--class="btn-group"-->
+                    <!--label="COM_ZT_LAYERSLIDER_ATTRIBS_STOP_SLIDER_LABEL"-->
+                    <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_STOP_SLIDER_DESC"-->
+                    <!--labelclass="control-label"-->
+                    <!--default="off">-->
+
+                <!--<option-->
+                        <!--value="off">JOFF-->
+                <!--</option>-->
+                <!--<option-->
+                        <!--value="on">JON-->
+                <!--</option>-->
+            <!--</field>-->
+
+            <!--<field name="stop_after_loops" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_STOP_AFTER_LOOPS_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_STOP_AFTER_LOOPS_DESC" class="inputbox" size="6"-->
+                   <!--default="0"/>-->
+
+            <!--<field name="stop_at_slide" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_STOP_AT_SLIDE_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_STOP_AT_SLIDE_DESC" class="inputbox" size="6"-->
+                   <!--default="2"/>-->
+
+        <!--</fieldset>-->
+
+        <!--<fieldset name="position" label="COM_ZT_LAYERSLIDER_ATTRIBS_FIELDSET_POSITION_LABEL">-->
+
+            <!--<field-->
+                    <!--name="position"-->
+                    <!--type="list"-->
+                    <!--class="btn-group"-->
+                    <!--labelclass="control-label"-->
+                    <!--label="COM_ZT_LAYERSLIDER_POSITION_ON_THE_PAGE_LABEL"-->
+                    <!--description="COM_ZT_LAYERSLIDER_POSITION_ON_THE_PAGE_DESC"-->
+                    <!--default="0">-->
+                <!--<option value="left">COM_ZT_LAYERSLIDER_LEFT</option>-->
+                <!--<option value="center">COM_ZT_LAYERSLIDER_CENTER</option>-->
+                <!--<option value="right">COM_ZT_LAYERSLIDER_RIGHT</option>-->
+            <!--</field>-->
+
+            <!--<field name="margin_top" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_MARGIN_TOP_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_MARGIN_TOP_DESC" class="inputbox" size="6"-->
+                   <!--default="0"/>-->
+
+            <!--<field name="margin_bottom" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_MARGIN_BOTTOM_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_MARGIN_BOTTOM_DESC" class="inputbox" size="6"-->
+                   <!--default="0"/>-->
+            <!--<field name="margin_left" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_MARGIN_LEFT_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_MARGIN_LEFT_DESC" class="inputbox" size="6"-->
+                   <!--default="0"/>-->
+            <!--<field name="margin_right" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_MARGIN_RIGHT_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_MARGIN_RIGHT_DESC" class="inputbox" size="6"-->
+                   <!--default="0"/>-->
+
+        <!--</fieldset>-->
+
+
+
+
+        <!--<fieldset name="appearance" label="COM_ZT_LAYERSLIDER_ATTRIBS_FIELDSET_APEARANCE_LABEL">-->
+
+            <!--<field-->
+                    <!--name="shadow_type"-->
+                    <!--type="list"-->
+                    <!--class="btn-group"-->
+                    <!--labelclass="control-label"-->
+                    <!--label="COM_ZT_LAYERSLIDER_ATTRIBS_SHADOW_TYPE_LABEL"-->
+                    <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_SHADOW_TYPE_DESC"-->
+                    <!--default="0">-->
+                <!--<option value="0">COM_ZT_LAYERSLIDER_NO_SHADOW</option>-->
+                <!--<option value="1">1</option>-->
+                <!--<option value="2">2</option>-->
+            <!--</field>-->
+
+            <!--<field-->
+                    <!--name="show_timerbar"-->
+                    <!--type="radio"-->
+                    <!--class="btn-group"-->
+                    <!--label="COM_ZT_LAYERSLIDER_ATTRIBS_SHOW_TIMERBAR_LABEL"-->
+                    <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_SHOW_TIMERBAR_DESC"-->
+                    <!--labelclass="control-label"-->
+                    <!--default="0">-->
+
+                <!--<option-->
+                        <!--value="0">JHIDE-->
+                <!--</option>-->
+                <!--<option-->
+                        <!--value="1">JSHOW-->
+                <!--</option>-->
+            <!--</field>-->
+
+            <!--<field-->
+                    <!--name="timebar_position"-->
+                    <!--type="radio"-->
+                    <!--class="btn-group"-->
+                    <!--label="COM_ZT_LAYERSLIDER_ATTRIBS_TIMEBAR_POSITION_LABEL"-->
+                    <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_TIMEBAR_POSITION_DESC"-->
+                    <!--labelclass="control-label"-->
+                    <!--default="top">-->
+
+                <!--<option-->
+                        <!--value="top">COM_ZT_LAYERSLIDER_TOP-->
+                <!--</option>-->
+                <!--<option-->
+                        <!--value="bottom">COM_ZT_LAYERSLIDER_BOTTOM-->
+                <!--</option>-->
+            <!--</field>-->
+            <!--<field name="background_color" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_BACKGROUND_COLOR_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_BACKGROUND_COLOR_DESC" class="inputbox" size="6"-->
+                   <!--default="#E9E9E9"/>-->
+
+            <!--<field name="padding" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_PADDING_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_PADDING_DESC" class="inputbox" size="6"-->
+                   <!--default="5"/>-->
+
+            <!--<field-->
+                    <!--name="show_background_image"-->
+                    <!--type="radio"-->
+                    <!--class="btn-group"-->
+                    <!--label="COM_ZT_LAYERSLIDER_ATTRIBS_SHOW_BACKGROUND_IMAGE_LABEL"-->
+                    <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_SHOW_BACKGROUND_IMAGE_DESC"-->
+                    <!--labelclass="control-label"-->
+                    <!--default="0">-->
+
+                <!--<option-->
+                        <!--value="0">JNO-->
+                <!--</option>-->
+                <!--<option-->
+                        <!--value="1">JYES-->
+                <!--</option>-->
+            <!--</field>-->
+
+            <!--<field name="background_image" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_BACKGROUND_IMAGE_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_BACKGROUND_IMAGE_DESC" class="inputbox" size="30"-->
+                   <!--default=""/>-->
+
+        <!--</fieldset>-->
+
+        <!--<fieldset name="navigation" label="COM_ZT_LAYERSLIDER_ATTRIBS_FIELDSET_NAVIGATION_LABEL">-->
+
+            <!--<field-->
+                    <!--name="navigaion_type"-->
+                    <!--type="list"-->
+                    <!--class="btn-group"-->
+                    <!--multiple="true"-->
+                    <!--labelclass="control-label"-->
+                    <!--label="COM_ZT_LAYERSLIDER_ATTRIBS_NAVIGATION_TYPE_LABEL"-->
+                    <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_NAVIGATION_TYPE_DESC"-->
+                    <!--default="">-->
+                <!--<option value="bullets">Bullet</option>-->
+                <!--<option value="arrows">Arrows</option>-->
+                <!--<option value="thumbnails">Thumb</option>-->
+                <!--<option value="tabs">Tabs</option>-->
+
+            <!--</field>-->
+
+            <!--<field name="navigation_bullets_preset" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_NAV_BULL_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_NAV_BULL_DESC" class="inputbox" size="6"-->
+            <!--/>-->
+
+            <!--<field name="navigation_bullets_style" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_NAV_BULL_STY_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_NAV_BULL_STY_DESC" class="inputbox" size="6"-->
+            <!--/>-->
+
+            <!--<field name="rtl_bullets" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_NAV_RTL_BULL_LABEL"-->
+                               <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_NAV_BULL_NAV_RTL_DESC" class="inputbox" size="6"-->
+                        <!--/>-->
+
+            <!--<field name="enable_bullets" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_NAV_EN_BULL_LABEL"-->
+                               <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_NAV_BULL_EN_BULL_DESC" class="inputbox" size="6"-->
+                        <!--/>-->
+
+
+            <!--<field-->
+                    <!--name="navigation_style"-->
+                    <!--type="list"-->
+                    <!--class="btn-group"-->
+                    <!--labelclass="control-label"-->
+                    <!--label="COM_ZT_LAYERSLIDER_ATTRIBS_NAVIGATION_STYLE_LABEL"-->
+                    <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_NAVIGATION_STYLE_DESC"-->
+                    <!--default="round">-->
+                <!--<option value="hesperiden">Hesperiden</option>-->
+                <!--<option value="ares">Ares</option>-->
+
+            <!--</field>-->
+
+            <!--<field-->
+                    <!--name="navigaion_always_on"-->
+                    <!--type="radio"-->
+                    <!--class="btn-group"-->
+                    <!--label="COM_ZT_LAYERSLIDER_ATTRIBS_NAVIGAION_ALWAYS_ON_LABEL"-->
+                    <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_NAVIGAION_ALWAYS_ON_DESC"-->
+                    <!--labelclass="control-label"-->
+                    <!--default="0">-->
+
+                <!--<option-->
+                        <!--value="0">JNO-->
+                <!--</option>-->
+                <!--<option-->
+                        <!--value="1">JYES-->
+                <!--</option>-->
+            <!--</field>-->
+
+            <!--<field name="hide_thumbs" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_HIDE_THUMBS_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_HIDE_THUMBS_DESC" class="inputbox" size="6"-->
+                   <!--/>-->
+
+            <!--<field name="navigation_thumbs_preset" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_NAVI_THUMB_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_NAVI_THUMB_DESC" class="inputbox" size="6"-->
+                   <!--/>-->
+            <!--<field name="rightarrow_position" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_NAVI_RIG_ARR_P_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_NAVI_RIG_ARR_P_DESC" class="inputbox" size="6"-->
+                   <!--/>-->
+
+            <!--<field name="arrows_over_hidden" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_ARR_O_HDD_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_ARR_O_HDD_DESC" class="inputbox" size="6"-->
+                   <!--/>-->
+         <!--<field name="hide_arrows_over" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_HIDE_ARR_OV_LABEL"-->
+                           <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_HIDE_ARR_OV_DESC" class="inputbox" size="6"-->
+                           <!--/>-->
+
+            <!--<field name="arrows_under_hidden" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_ARR_UN_HDD_LABEL"-->
+                           <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_ARR_UN_HDD_DESC" class="inputbox" size="6"-->
+                           <!--/>-->
+
+            <!--<field name="hide_arrows_on_mobile" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_HI_ARR_O_M_LABEL"-->
+                           <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_HI_ARR_O_M_DESC" class="inputbox" size="6"-->
+                           <!--/>-->
+
+            <!--<field name="hide_arrows_mobile" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_HI_ARR_M_LABEL"-->
+                           <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_HI_ARR_M_DESC" class="inputbox" size="6"-->
+                           <!--/>-->
+            <!--<field name="hide_arrows" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_HI_ARR_LABEL"-->
+                                       <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_HI_ARR_DESC" class="inputbox" size="6"-->
+                                       <!--/>-->
+
+            <!--<field name="arrows_always_on" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_ARR_AW_SH_LABEL"-->
+                                       <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_ARR_AW_SH_DESC" class="inputbox" size="6"-->
+                                       <!--/>-->
+
+            <!--<field name="navigation_arrows_preset" type="text" label="COM_ZT_LAYERSLIDER_NAVI_ARR_PR_LABEL"-->
+                                       <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_NAVI_ARR_PR_DESC" class="inputbox" size="6"-->
+                                       <!--/>-->
+
+            <!--<field name="navigation_arrow_style" type="text" label="COM_ZT_LAYERSLIDER_NAVI_ARR_STY_LABEL"-->
+                                       <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_NAVI_ARR_STY_DESC" class="inputbox" size="6"-->
+                                       <!--/>-->
+
+            <!--<field name="rtl_arrows" type="text" label="COM_ZT_LAYERSLIDER_RTL_NAV_LABEL"-->
+                                       <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_RTL_NAV_DESC" class="inputbox" size="6"-->
+                                       <!--/>-->
+<!--<field name="enable_arrows" type="text" label="COM_ZT_LAYERSLIDER_ENAB_NARR_LABEL"-->
+                                       <!--description="COM_ZT_LAYERSLIDER_ENAB_NARR_DESC" class="inputbox" size="6"-->
+                                       <!--/>-->
+
+
+
+
+            <!--<field-->
+                    <!--name="leftarrow_align_hor"-->
+                    <!--type="list"-->
+                    <!--class="btn-group"-->
+                    <!--labelclass="control-label"-->
+                    <!--label="COM_ZT_LAYERSLIDER_ATTRIBS_LEFTARROW_ALIGN_HOR_LABEL"-->
+                    <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_LEFTARROW_ALIGN_HOR_DESC"-->
+                    <!--default="left">-->
+                <!--<option value="left">Left</option>-->
+                <!--<option value="center">Center</option>-->
+                <!--<option value="right">Right</option>-->
+
+            <!--</field>-->
+            <!--<field-->
+                    <!--name="leftarrow_align_vert"-->
+                    <!--type="list"-->
+                    <!--class="btn-group"-->
+                    <!--labelclass="control-label"-->
+                    <!--label="COM_ZT_LAYERSLIDER_ATTRIBS_LEFTARROW_ALIGN_VERT_LABEL"-->
+                    <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_LEFTARROW_ALIGN_VERT_DESC"-->
+                    <!--default="center">-->
+                <!--<option value="top">Left</option>-->
+                <!--<option value="center">Center</option>-->
+                <!--<option value="bottom">Right</option>-->
+
+            <!--</field>-->
+
+            <!--<field name="leftarrow_offset_hor" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_LEFTARROW_OFFSET_HOR_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_LEFTARROW_OFFSET_HOR_DESC" class="inputbox" size="6"-->
+                   <!--default="20"/>-->
+            <!--<field name="leftarrow_offset_vert" type="text"-->
+                   <!--label="COM_ZT_LAYERSLIDER_ATTRIBS_LEFTARROW_OFFSET_VERT_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_LEFTARROW_OFFSET_VERT_DESC" class="inputbox" size="6"-->
+                   <!--default="0"/>-->
+
+            <!--<field name="leftarrow_position" type="text"-->
+                   <!--label="COM_ZT_LAYERSLIDER_ATTRIBS_LEFTARROW_POS_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_LEFTARROW_POS_DESC" class="inputbox" size="6"-->
+                   <!--default="0"/>-->
+
+
+            <!--&lt;!&ndash;Right Arrow&ndash;&gt;-->
+
+            <!--<field-->
+                    <!--name="rightarrow_align_hor"-->
+                    <!--type="list"-->
+                    <!--class="btn-group"-->
+                    <!--labelclass="control-label"-->
+                    <!--label="COM_ZT_LAYERSLIDER_ATTRIBS_RIGHTARROW_ALIGN_HOR_LABEL"-->
+                    <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_RIGHTARROW_ALIGN_HOR_DESC"-->
+                    <!--default="right">-->
+                <!--<option value="left">Left</option>-->
+                <!--<option value="center">Center</option>-->
+                <!--<option value="right">Right</option>-->
+
+            <!--</field>-->
+            <!--<field-->
+                    <!--name="rightarrow_align_vert"-->
+                    <!--type="list"-->
+                    <!--class="btn-group"-->
+                    <!--labelclass="control-label"-->
+                    <!--label="COM_ZT_LAYERSLIDER_ATTRIBS_RIGHTARROW_ALIGN_VERT_LABEL"-->
+                    <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_RIGHTARROW_ALIGN_VERT_DESC"-->
+                    <!--default="center">-->
+                <!--<option value="top">Left</option>-->
+                <!--<option value="center">Center</option>-->
+                <!--<option value="bottom">Right</option>-->
+
+            <!--</field>-->
+
+            <!--<field name="rightarrow_offset_hor" type="text"-->
+                   <!--label="COM_ZT_LAYERSLIDER_ATTRIBS_RIGHTARROW_OFFSET_HOR_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_RIGHTARROW_OFFSET_HOR_DESC" class="inputbox" size="6"-->
+                   <!--default="20"/>-->
+            <!--<field name="rightarrow_offset_vert" type="text"-->
+                   <!--label="COM_ZT_LAYERSLIDER_ATTRIBS_RIGHTARROW_OFFSET_VERT_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_RIGHTARROW_OFFSET_VERT_DESC" class="inputbox" size="6"-->
+                   <!--default="0"/>-->
+
+            <!--<field name="ztslider-nav-preset-default" type="text"-->
+                   <!--label="COM_ZT_LAYERSLIDER_N_P_NAV_PRESET_DEFAULT_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_N_P_NAV_PRESET_DEFAULT_DESC"-->
+                   <!--class="inputbox"-->
+            <!--/>-->
+
+        <!--</fieldset>-->
+
+        <!--<fieldset name="thumbnails" label="COM_ZT_LAYERSLIDER_ATTRIBS_FIELDSET_THUMBNAILS_LABEL">-->
+
+            <!--<field name="thumb_width" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_THUMB_WIDTH_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_THUMB_WIDTH_DESC" class="inputbox" size="6"-->
+                   <!--/>-->
+            <!--<field name="thumb_height" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_THUMB_HEIGHT_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_THUMB_HEIGHT_DESC" class="inputbox" size="6"-->
+                   <!--/>-->
+            <!--<field name="thumb_amount" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_THUMB_AMOUNT_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_THUMB_AMOUNT_DESC" class="inputbox" size="6"-->
+                   <!--/>-->
+
+            <!--<field name="thumbnails_position" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_THUMB_POSITION_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_THUMB_POSITION_DESC" class="inputbox" size="6"-->
+                   <!--/>-->
+
+            <!--<field name="thumbnails_align_vert" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_THUMB_A_R_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_THUMB_THUMB_A_R_DESC" class="inputbox" size="6"-->
+                   <!--/>-->
+
+            <!--<field name="thumbnails_align_hor" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_THUMB_A_H_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_THUMB_THUMB_A_H_DESC" class="inputbox" size="6"-->
+                   <!--/>-->
+
+            <!--<field name="thumbnails_inner_outer" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_THUMB_A_O_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_THUMB_THUMB_A_O_DESC" class="inputbox" size="6"-->
+                   <!--/>-->
+
+            <!--<field name="thumbs_over_hidden" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_THUMB_O_H_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_THUMB_THUMB_O_H_DESC" class="inputbox" size="6"-->
+                   <!--/>-->
+
+            <!--<field name="thumbs_under_hidden" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_THUMB_U_H_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_THUMB_THUMB_U_H_DESC" class="inputbox" size="6"-->
+                   <!--/>-->
+            <!--<field name="hide_thumbs_on_mobile" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_THUMB_H_M_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_THUMB_THUMB_H_M_DESC" class="inputbox" size="6"-->
+                   <!--/>-->
+
+            <!--<field name="hide_thumbs_mobile" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_THUMB_H_T_M_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_THUMB_THUMB_H_T_M_DESC" class="inputbox" size="6"-->
+                   <!--/>-->
+
+            <!--<field name="hide_thumbs" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_THUMB_H_T_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_THUMB_THUMB_H_T_DESC" class="inputbox" size="6"-->
+                   <!--/>-->
+
+            <!--<field name="thumbs_always_on" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_HIDE_THUMBS_A_ON_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_HIDE_THUMBS_A_ON_DESC" class="inputbox" size="6"-->
+            <!--/>-->
+
+            <!--<field name="thumb_width_min" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_HIDE_THUMBS_W_M_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_HIDE_THUMBS_W_M_DESC" class="inputbox" size="6"-->
+            <!--/>-->
+
+            <!--<field name="thumbnail_direction" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_HIDE_THUMBS_HEI_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_HIDE_THUMBS_HEI_DESC" class="inputbox" size="6"-->
+            <!--/>-->
+            <!--<field name="thumbnails_space" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_HIDE_THUMBS_SPC_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_HIDE_THUMBS_SPC_DESC" class="inputbox" size="6"-->
+            <!--/>-->
+            <!--<field name="thumbnails_style" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_HIDE_THUMBS_STY_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_HIDE_THUMBS_STY_DESC" class="inputbox" size="6"-->
+            <!--/>-->
+            <!--<field name="thumbnails_wrapper_opacity" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_HIDE_THUMBS_O_W_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_HIDE_THUMBS_O_W_DESC" class="inputbox" size="6"-->
+            <!--/>-->
+            <!--<field name="thumbnails_wrapper_color" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_HIDE_THUMBS_W_C_W_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_HIDE_THUMBS_W_C_W_DESC" class="inputbox" size="6"-->
+            <!--/>-->
+            <!--<field name="span_thumbnails_wrapper" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_HIDE_THUMBS_P_W_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_HIDE_THUMBS_P_W_DESC" class="inputbox" size="6"-->
+            <!--/>-->
+
+            <!--<field name="thumbnails_padding" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_HIDE_THUMBS_PADDI_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_HIDE_THUMBS_PADDI_DESC" class="inputbox" size="6"-->
+            <!--/>-->
+
+            <!--<field name="rtl_thumbnails" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_HIDE_THUMBS_RTL_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_HIDE_THUMBS_PADDI_DESC" class="inputbox" size="6"-->
+            <!--/>-->
+
+            <!--<field name="enable_thumbnails" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_HIDE_ENALE_THUMBS_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_HIDE_ENALE_THUMBS_DESC" class="inputbox" size="6"-->
+            <!--/>-->
+            <!--<field name="bullets_position" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_BLU_P_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_BLU_P_DESC" class="inputbox" size="6"-->
+            <!--/>-->
+            <!--<field name="bullets_offset_vert" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_BLU_O_R_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_BLU_O_R_DESC" class="inputbox" size="6"-->
+            <!--/>-->
+
+            <!--<field name="bullets_offset_hor" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_BLU_O_H_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_BLU_O_H_DESC" class="inputbox" size="6"-->
+            <!--/>-->
+         <!--<field name="bullets_align_vert" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_BLU_A_V_LABEL"-->
+                           <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_BLU_A_V_DESC" class="inputbox" size="6"-->
+                    <!--/>-->
+
+            <!--<field name="bullets_align_hor" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_BLU_A_H_LABEL"-->
+                           <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_BLU_A_H_DESC" class="inputbox" size="6"-->
+                    <!--/>-->
+
+            <!--<field name="hide_bullets_over" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_BLU_H_O_LABEL"-->
+                           <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_BLU_H_O_DESC" class="inputbox" size="6"-->
+                    <!--/>-->
+            <!--<field name="bullets_over_hidden" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_BLU_OV_H_LABEL"-->
+                           <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_BLU_OV_H_DESC" class="inputbox" size="6"-->
+                    <!--/>-->
+
+            <!--<field name="bullets_under_hidden" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_BLU_UN_H_LABEL"-->
+                           <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_BLU_UN_H_DESC" class="inputbox" size="6"-->
+                    <!--/>-->
+
+            <!--<field name="hide_bullets_on_mobile" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_BLU_ON_M_LABEL"-->
+                           <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_BLU_ON_M_DESC" class="inputbox" size="6"-->
+                    <!--/>-->
+
+            <!--<field name="hide_bullets_mobile" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_BLU_HI_M_LABEL"-->
+                           <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_BLU_HI_M_DESC" class="inputbox" size="6"-->
+                    <!--/>-->
+        <!--<field name="hide_bullets" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_BLU_HI_O_LABEL"-->
+                                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_BLU_HI_O_DESC" class="inputbox" size="6"-->
+                            <!--/>-->
+
+            <!--<field name="bullets_always_on" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_BLU_AL_SH_LABEL"-->
+                                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_BLU_AL_SH_DESC" class="inputbox" size="6"-->
+                            <!--/>-->
+
+            <!--<field name="bullets_direction" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_BLU_DIREC_LABEL"-->
+                                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_BLU_DIREC_DESC" class="inputbox" size="6"-->
+                            <!--/>-->
+            <!--<field name="bullets_space" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_BLU_SPACE_LABEL"-->
+                                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_BLU_SPACE_DESC" class="inputbox" size="6"-->
+                            <!--/>-->
+
+        <!--</fieldset>-->
+
+        <!--<fieldset name="mobile_visibility" label="COM_ZT_LAYERSLIDER_ATTRIBS_FIELDSET_MOBILE_VISIBILITY_LABEL">-->
+
+            <!--<field name="hide_slider_under" type="text" label="COM_ZT_LAYERSLIDER_ATTRIBS_HIDE_SLIDER_UNDER_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_HIDE_SLIDER_UNDER_DESC" class="inputbox" size="6"-->
+                   <!--default="0"/>-->
+            <!--<field name="hide_defined_layers_under" type="text"-->
+                   <!--label="COM_ZT_LAYERSLIDER_ATTRIBS_HIDE_DEFINED_LAYERS_UNDER_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_HIDE_DEFINED_LAYERS_UNDER_DESC" class="inputbox" size="6"-->
+                   <!--default="0"/>-->
+            <!--<field name="hide_all_layers_under" type="text"-->
+                   <!--label="COM_ZT_LAYERSLIDER_ATTRIBS_HIDE_ALL_LAYERS_UNDER_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_HIDE_ALL_LAYERS_UNDER_DESC" class="inputbox" size="6"-->
+                   <!--default="0"/>-->
+
+        <!--</fieldset>-->
+
+        <!--<fieldset name="first_slide" label="COM_ZT_LAYERSLIDER_ATTRIBS_FIELDSET_FIRST_SLIDE_LABEL">-->
+
+
+            <!--<field-->
+                    <!--name="first_transition_active"-->
+                    <!--type="radio"-->
+                    <!--class="btn-group"-->
+                    <!--label="COM_ZT_LAYERSLIDER_ATTRIBS_FIRST_TRANSITION_ACTIVE_LABEL"-->
+                    <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_FIRST_TRANSITION_ACTIVE_DESC"-->
+                    <!--labelclass="control-label"-->
+                    <!--default="off">-->
+
+                <!--<option-->
+                        <!--value="off">JOFF-->
+                <!--</option>-->
+                <!--<option-->
+                        <!--value="on">JON-->
+                <!--</option>-->
+            <!--</field>-->
+
+
+            <!--<field-->
+                    <!--name="first_transition_type"-->
+                    <!--type="list"-->
+                    <!--class="btn-group"-->
+                    <!--labelclass="control-label"-->
+                    <!--label="COM_ZT_LAYERSLIDER_ATTRIBS_FIRST_TRANSITION_TYPE_LABEL"-->
+                    <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_FIRST_TRANSITION_TYPE_DESC"-->
+                    <!--default="fade">-->
+                <!--<option value="random">Random</option>-->
+                <!--<option value="fade">Fade</option>-->
+                <!--<option value="slidehorizontal">Slide Horizontal</option>-->
+                <!--<option value="slidevertical">Slide Vertical</option>-->
+                <!--<option value="boxslide">Box Slide</option>-->
+                <!--<option value="boxfade">Box Fade</option>-->
+                <!--<option value="slotzoom-horizontal">SlotZoom Horizontal</option>-->
+                <!--<option value="slotslide-horizontal">SlotSlide Horizontal</option>-->
+                <!--<option value="slotfade-horizontal">SlotFade Horizontal</option>-->
+                <!--<option value="slotzoom-vertical">SlotZoom Vertical</option>-->
+                <!--<option value="slotslide-vertical">SlotSlide Vertical</option>-->
+                <!--<option value="slotfade-vertical">SlotFade Vertical</option>-->
+                <!--<option value="curtain-1">Curtain 1</option>-->
+                <!--<option value="curtain-2">Curtain 2</option>-->
+                <!--<option value="curtain-3">Curtain 3</option>-->
+                <!--<option value="slideleft">Slide Left</option>-->
+                <!--<option value="slideright">Slide Right</option>-->
+                <!--<option value="slideup">Slide Up</option>-->
+                <!--<option value="slidedown">Slide Down</option>-->
+                <!--<option value="papercut">Premium - Paper Cut</option>-->
+                <!--<option value="3dcurtain-horizontal">Premium - 3D Curtain Horizontal</option>-->
+                <!--<option value="3dcurtain-vertical">Premium - 3D Curtain Vertical</option>-->
+                <!--<option value="flyin">Premium - Fly In</option>-->
+                <!--<option value="turnoff">Premium - Turn Off</option>-->
+                <!--<option value="cubic">Premium - Cubic</option>-->
+
+            <!--</field>-->
+
+            <!--<field name="first_transition_duration" type="text"-->
+                   <!--label="COM_ZT_LAYERSLIDER_ATTRIBS_FIRST_TRANSITION_DURATION_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_FIRST_TRANSITION_DURATION_DESC" class="inputbox" size="6"-->
+                   <!--default="300"/>-->
+
+            <!--<field name="first_transition_slot_amount" type="text"-->
+                   <!--label="COM_ZT_LAYERSLIDER_ATTRIBS_FIRST_TRANSITION_SLOT_AMOUNT_LABEL"-->
+                   <!--description="COM_ZT_LAYERSLIDER_ATTRIBS_FIRST_TRANSITION_SLOT_AMOUNT_DESC" class="inputbox" size="6"-->
+                   <!--default="7"/>-->
+
+
+        <!--</fieldset>-->
+
+    </fields>
+
+</form>

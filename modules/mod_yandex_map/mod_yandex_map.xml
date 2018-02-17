@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.1"
+	client="site"
+	method="upgrade">
+	<name>Yandex map</name>
+	<author>Artem Yegorov</author>
+	<creationDate>June 2015</creationDate>
+	<copyright>Copyright (C) 2015 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>rubacking@gmail.com</authorEmail>
+	<authorUrl>www.joomly.ru</authorUrl>
+	<version>2.0.4</version>
+	<description>MOD_YANDEX_MAP_XML_DESCRIPTION</description>
+	<files>
+	<filename module="mod_yandex_map">mod_yandex_map.php</filename>
+		<folder>tmpl</folder>
+		<folder>admin</folder>
+		<folder>css</folder>
+		<folder>js</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_yandex_map.xml</filename>	
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_yandex_map.ini</language>
+		<language tag="en-GB">en-GB.mod_yandex_map.sys.ini</language>
+		<language tag="ru-RU">ru-RU.mod_yandex_map.ini</language>
+		<language tag="ru-RU">ru-RU.mod_yandex_map.sys.ini</language>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_YANDEX_MAP" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+					<field
+						name="zoom"
+						type="text"
+						default="16"
+						label="MOD_YANDEX_MAP_ZOOM"
+						description="MOD_YANDEX_MAP_ZOOM_DESC" />
+					<field
+						name="type"
+						type="list"
+						default="map"
+						label="MOD_YANDEX_MAP_TYPE"
+						description="MOD_YANDEX_MAP_TYPE_DESC">
+						<option
+							value="map">MOD_YANDEX_MAP_MAP</option>
+						<option
+							value="hybrid">MOD_YANDEX_MAP_HYBRID</option>
+						<option
+							value="satellite">MOD_YANDEX_MAP_SATELLITE</option>
+					</field>	
+					<field
+						name="icontype"
+						type="list"
+						default="dotIcon"
+						label="MOD_YANDEX_MAP_ICON_TYPE"
+						description="MOD_YANDEX_MAP_ICON_TYPE_DESC">
+						<option
+							value="icon">MOD_YANDEX_MAP_ICON</option>
+						<option
+							value="dotIcon">MOD_YANDEX_MAP_DOTICON</option>
+						<option
+							value="circleIcon">MOD_YANDEX_MAP_CIRCLEICON</option>
+						<option
+							value="circleDotIcon">MOD_YANDEX_MAP_CIRCLEDOTICON</option>	
+					</field>		
+					<field
+						name="width"
+						type="text"
+						default="auto"
+						label="MOD_YANDEX_MAP_WIDTH"
+						description="MOD_YANDEX_MAP_WIDTH_DESC" />
+					<field
+						name="height"
+						type="text"
+						default="400"
+						label="MOD_YANDEX_MAP_HEIGHT"
+						description="MOD_YANDEX_MAP_HEIGHT_DESC" />		
+					<field
+						name="margin"
+						type="radio"
+						class="btn-group btn-group-yesno"
+						default="auto"
+						label="MOD_YANDEX_MAP_MARGIN"
+						description="MOD_YANDEX_MAP_MARGIN_DESC">
+						<option
+							value="auto">MOD_YANDEX_MAP_CENTER</option>
+						<option
+							value="none">MOD_YANDEX_MAP_LEFT</option>
+					</field>	
+			</fieldset>
+			<fieldset name="markers-manager" label="MOD_YANDEX_MAP_MARKERS_MANAGER" addfieldpath="/modules/mod_yandex_map/admin/formfield">	
+				<field  type="markers" name="marker"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
